@@ -1,7 +1,28 @@
 nav {
     max-width: 1440px;
+    height: 100px;
+
+    // margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_container {
+    width: 95%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar_left {
-    
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    >p {
+        font-family: 'FiraCode';
+    }
 }
