@@ -1,1 +1,42 @@
-<p>skills works!</p>
+<section class="skills_wrapper">
+    <div class="skills_container">
+        <div class="columns_wrapper_left">
+            <!-- <div class="wrapper_filler_right">
+                <p>hallo</p>
+            </div> -->
+            <div class="headline_container">
+                <h4>technologies</h4>
+            </div>
+            <div class="text_container">
+                <h2>skillset</h2>
+                <p>A short introduction of your skills. Highlight your experience of using different front-end
+                    technologies and emphasise your openness to learning and adapting to new technologies. Show how
+                    important it is for you to keep up with the rapid changes in web development.</p>
+                <br>
+                <div>
+                    <h4>
+                        You need <span class="highlight">another skill?</span>
+                    </h4>
+                    <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+                </div>
+                <br>
+                <div class="jump_marks">
+                    <div class="jump_mark_wrapper">
+                        <p>Check my Work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns_wrapper_right">
+            <div class="icon_container">
+                @for (skill of skillSet; track skill) {
+                <div>
+                    <img src="./assets/img/icons/Angular.png">
+                    <p>{{skill.language}}</p>
+                </div>
+                }
+            </div>
+        </div>
+
+    </div>
+</section>
