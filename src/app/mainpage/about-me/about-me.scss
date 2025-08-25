@@ -5,75 +5,74 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    // background-color: aliceblue;
 
 }
 
 .about_container {
     width: 95%;
-    background-color: rgb(6, 42, 74);
+    // background-color: rgb(6, 42, 74);
     height: 60%;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 5rem;
 }
+
+
 
 .columns_wrapper_left {
-    // height: 100%;
-    // width: 100%;
-
-    // background-color: bisque;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-between;
-    // align-items: end;
-    margin-left: 1rem;
-}
-
-.column_wrapper_right {
-    // height: 100%;
-    // width: 100%;
-    // background-color: bisque;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-between;
-    // align-items: end;
-    margin-left: 1rem;
-}
-
-.column_container {
-    height: 65%;
-    width: 50%;
-    flex-grow: 1;
-    border-radius: 2rem;
-    // height: 680px;
-    // background-color: rgba(48, 67, 48, 0.715);
-    overflow: hidden;
-}
-
-.column_headline {}
-
-.column_text {
     // background-color: aqua;
-}
-
-
-
-.portrait_wrapper {
-    // background-color: beige;
-    height: 100%;
-    width: 100%;
-    border-radius: 2rem;
+    width: 50%;
+    height: 65%;
 
     display: flex;
-    justify-content: center;
-    align-items: end;
+    align-items: start;
+    overflow: hidden;
 
+    border-radius: 1rem;
+}
+
+.portrait_container {
     >img {
-
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+    }
+}
+
+.columns_wrapper_right {
+    // background-color: rgb(48, 62, 62);
+    width: 50%;
+    // height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+
+    gap: 1rem;
+
+}
+
+// .wrapper_filler_right {
+//     background-color: bisque;
+//     height: 200px;
+//     // flex-grow: 1;
+// }
+
+.headline_container {
+    >h4 {
+        color: #3DCFB6;
+    }
+}
+
+.text_container {
+    border: 1px solid #3DCFB6;
+    border-radius: 1rem;
+
+    padding: 1rem;
+
+    >h2 {
+        color: #3DCFB6;
     }
 }

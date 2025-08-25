@@ -21,11 +21,26 @@ body {
 h1 {
     font-weight: 700;
     font-size: 128px;
+    text-align: center;
 }
 
 h2 {
-    font-weight: 400;
+    font-family: "FiraCode";
+    font-weight: 700;
+    font-size: 64px;
+}
+
+h3 {
+    font-family: "FiraCode";
     font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h4 {
+    font-family: "Karla";
+    font-weight: 500;
+    font-size: 24px;
 }
 
 p {
@@ -33,7 +48,7 @@ p {
     font-size: 20px;
 }
 
-// color: #3DCFB6 -> Fontcolor Headlines
+
 
 
 
