@@ -13,9 +13,10 @@
 
 body {
     background-color: #1C1C1C;
-    // width: 100%;
-    // display: flex;
-    // flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -47,6 +48,13 @@ h4 .highlight {
     color: #3DCFB6;
     font-size: inherit;
     font-weight: inherit;
+}
+
+h5 {
+    font-family: "FiraCode";
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
 }
 
 p {
