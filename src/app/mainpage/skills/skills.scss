@@ -30,11 +30,30 @@
     gap: 1rem;
 
     width: 100%;
+
+    display: flex;
+    align-items: end;
+
+
 }
 
 .icon_container {
+    // background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+
+    gap: 2rem;
 
     >div {
+        // background-color: #3DCFB6;
+        flex: 0 0 150px;
+
+
         display: flex;
         flex-direction: column;
         align-items: center;
