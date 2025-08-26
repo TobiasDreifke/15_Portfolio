@@ -23,7 +23,22 @@ nav {
     gap: 2rem;
 
     >p {
-        font-family: 'FiraCode';
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: '•';
+            position: absolute;
+            left: 50%;
+            bottom: -1rem; 
+            transform: translateX(-50%);
+            color: transparent;
+            transition: color 0.2s;
+        }
+
+        &:hover::after {
+            color: #3DCFB6;
+        }
     }
 
 }
