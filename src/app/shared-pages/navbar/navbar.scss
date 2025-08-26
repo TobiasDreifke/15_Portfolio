@@ -31,10 +31,40 @@ nav {
 
 .logo {
     width: 100px;
+
+    .logo-svg {
+        width: 100%;
+        transition: all 0.3s ease;
+
+        .cls-1 {
+            fill: #fff;
+            stroke: none;
+            transition: all 0.3s ease;
+        }
+
+        .cls-2 {
+            fill: #59bcac;
+            stroke: none;
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            .cls-1 {
+                fill: transparent;
+                stroke: #fff;
+                stroke-width: 2px;
+            }
+
+            .cls-2 {
+                fill: transparent;
+                stroke: #59bcac;
+                stroke-width: 2px;
+            }
+        }
+    }
 }
 
-.language_wrapper {
-}
+.language_wrapper {}
 
 .language_switcher {
     position: relative;
@@ -44,6 +74,10 @@ nav {
     border-radius: 2rem;
     overflow: hidden;
     cursor: pointer;
+
+    &:hover {
+        border: 1px solid #a9a9a9;
+    }
 
     div {
         flex: 1;
