@@ -25,4 +25,57 @@ nav {
     >p {
         font-family: 'FiraCode';
     }
+
+}
+
+
+.logo {
+    width: 100px;
+}
+
+.language_wrapper {
+}
+
+.language_switcher {
+    position: relative;
+    display: flex;
+    width: 120px;
+    border: 1px solid #3DCFB6;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    div {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem 0;
+        z-index: 2;
+        transition: color 0.2s;
+    }
+
+    .language_EN,
+    .language_DE {
+        border-radius: 2rem;
+    }
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #3DCFB6;
+        border-radius: inherit;
+        transition: left 0.3s;
+    }
+
+    &.active_EN::before {
+        left: 0;
+    }
+
+    &.active_DE::before {
+        left: 50%;
+    }
 }

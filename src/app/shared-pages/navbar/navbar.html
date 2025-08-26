@@ -1,13 +1,18 @@
 <nav>
     <div class="nav_container">
         <div class="navbar_left">
-            <div class="language_switch">
-                <img src="" alt="language_switch">
+            <div class="language_wrapper">
+                <div class="language_switcher" [ngClass]="{'active_EN': activeLanguage === 'EN','active_DE': activeLanguage === 'DE'}" (click)="toggleLang()">
+                    <div class="language_EN">EN</div>
+                    <div class="language_DE">DE</div>
+                </div>
             </div>
             <p>About me</p>
             <p>Skills</p>
             <p>Projects</p>
         </div>
-        <img src="" alt="Logo">
+        <div class="logo">
+            <img src="./assets/img/logo/logo_Zeichenfläche 1.svg" alt="tobias dreifke logo">
+        </div>
     </div>
 </nav>
