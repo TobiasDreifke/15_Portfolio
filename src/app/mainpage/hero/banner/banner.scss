@@ -1,0 +1,47 @@
+.banner_wrapper {
+  width: 100%;
+  box-shadow:
+    2px 2px 25px 5px #0000002f,
+    -2px -2px 25px 5px #0000002f;
+}
+
+.banner_container {
+  display: flex;
+  align-items: center;
+  background-color: #59bcab1f;
+  height: 2rem;
+  
+
+}
+
+.scrolling_content {
+
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  animation: scroll 15s linear infinite;
+}
+
+.banner_wrapper:hover .scrolling_content {
+  animation-play-state: paused;
+}
+
+.content {
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;
+
+  >p {
+    color: #59bcac;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-25%);
+  }
+}
