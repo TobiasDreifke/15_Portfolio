@@ -3,15 +3,15 @@
     height: calc(100dvh - 100px);
     // margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .hero_container {
     width: 95%;
     height: 60%;
-    padding-right: 5rem;
-    padding-left: 0;
     // background-color: antiquewhite;
     display: flex;
     flex-direction: column;
@@ -41,4 +41,11 @@
     >p {
         text-align: center;
     }
+}
+
+
+
+.diagonal {
+    position: relative;
+    transform: rotate(-5deg);
 }
