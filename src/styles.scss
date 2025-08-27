@@ -19,6 +19,12 @@ body {
     align-items: center;
 }
 
+
+body {
+    background: linear-gradient(35deg, rgba(28, 28, 28, 100) 85%, rgba(34, 92, 81, 1) 100%);
+    // background-size: contain;
+}
+
 h1 {
     font-weight: 700;
     font-size: 128px;
