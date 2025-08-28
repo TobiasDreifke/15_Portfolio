@@ -1,0 +1,35 @@
+// ---------------- BUTTONS --------------------
+
+@mixin jump-mark($border-color: #D9D9D9,
+    $hover-color: null,
+    $hover-scale: 1.07,
+    $button-scale: 0.95,
+    $padding: 0.5rem 1rem) {
+    $hover-color: if($hover-color ==null, #3DCFB6, $hover-color);
+
+    border: 1px $border-color solid;
+    border-radius: 2rem;
+    padding: $padding;
+    display: inline-block;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+
+    >a {
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    &:hover {
+        border-color: $hover-color;
+        transform: scale($button-scale);
+
+        >a {
+            color: $hover-color;
+            transform: scale($hover-scale);
+        }
+    }
+}
+
+
