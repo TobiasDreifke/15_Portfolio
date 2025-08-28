@@ -12,4 +12,20 @@ import { Navbar } from './shared-pages/navbar/navbar';
 })
 export class App {
   protected readonly title = signal('15_Portfolio');
+
+
+  ngAfterViewInit() {
+    const cursor = document.getElementById('cursor-shadow');
+    if (!cursor) return;
+
+    const updateCursor = (e: MouseEvent) => {
+      const rect = cursor.getBoundingClientRect(); 
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      cursor.style.transform = `translate(${e.clientX - centerX}px, ${e.clientY - centerY}px)`;
+    };
+
+    document.addEventListener('mousemove', updateCursor);
+  }
 }
