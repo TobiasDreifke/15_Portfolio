@@ -8,6 +8,8 @@
 
     scrollbar-width: thin;
     scrollbar-color: #FD5B4F #dddddd00;
+
+    scroll-behavior: smooth;
 }
 
 body {
@@ -44,6 +46,12 @@ h4 {
     text-align: center;
 }
 
+h4 .highlight {
+    color: #3DCFB6;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 h5 {
     font-weight: 400;
     font-size: clamp(1rem, 2vw, 24px);
@@ -56,6 +64,25 @@ p {
     text-align: center;
 }
 
+.cursor-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    filter: blur(8px);
+
+
+    background: radial-gradient(circle,
+            rgba(60, 207, 182, 0.25) 0%,
+            rgba(60, 207, 182, 0.1) 25%,
+            rgba(60, 207, 182, 0) 55%);
+
+    transition: transform 0.02s ease-out; 
+}
 
 
 
