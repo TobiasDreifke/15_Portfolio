@@ -58,11 +58,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 0.2rem;
 
         >img {
             width: 50px;
             height: 50px;
             object-fit: contain;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-1rem);
+            }
         }
 
         >p {
@@ -99,6 +105,10 @@
     border: 1px solid #3DCFB6;
     border-radius: 1rem;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     padding: 1rem;
 
     >h2 {
@@ -117,7 +127,21 @@
     border-radius: 2rem;
     padding: 0.5rem 1rem;
 
-    >p {
+    >a {
         text-align: center;
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease, transform 0.3s ease;
+        display: inline-block;
+    }
+
+    &:hover {
+        border: 1px #3DCFB6 solid;
+
+        >a {
+            color: #3DCFB6;
+            transform: scale(1.15);
+        }
+
     }
 }

@@ -12,47 +12,59 @@ export class Skills {
   skillSet = [
     {
       language: "HTML",
-      icon: "html-icon.png",
+      icon: "html.png",
     },
     {
       language: "CSS",
-      icon: "html-icon.png",
+      icon: "css.png",
     },
     {
       language: "JavaScript",
-      icon: "html-icon.png",
+      icon: "javascript.png",
     },
     {
       language: "Material Design",
-      icon: "html-icon.png",
+      icon: "material design.png",
     },
     {
       language: "TypeScript",
-      icon: "html-icon.png",
+      icon: "typescript.png",
     },
     {
       language: "Angular",
-      icon: "html-icon.png",
+      icon: "angular.png",
     },
     {
       language: "Firebase",
-      icon: "html-icon.png",
+      icon: "firebase.png",
     },
     {
       language: "Git",
-      icon: "html-icon.png",
+      icon: "git.png",
     },
        {
       language: "REST-API",
-      icon: "html-icon.png",
+      icon: "rest-api.png",
     },
     {
       language: "Scrum",
-      icon: "html-icon.png",
+      icon: "scrum.png",
     },
     {
       language: "Growth mindset",
-      icon: "html-icon.png",
+      icon: "growthmindset.png",
     },
   ]
+
+
+
+
+
+
+
+
+
+
+
+
 }
