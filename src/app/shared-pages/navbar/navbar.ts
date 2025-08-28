@@ -13,4 +13,6 @@ export class Navbar {
   toggleLang() {
     this.activeLanguage = this.activeLanguage === 'EN' ? 'DE' : 'EN';
   }
+
+  activeSection: string = ''; 
 }

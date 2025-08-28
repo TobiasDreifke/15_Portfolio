@@ -24,17 +24,18 @@ nav {
     align-items: center;
     gap: 2rem;
 
-
-    >p {
+    .nav_link {
         position: relative;
         cursor: pointer;
+        color: #D9D9D9;
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.2s ease;
 
         &::after {
             content: '•';
             position: absolute;
             left: 50%;
             bottom: -1rem;
-            transform: translateX(-50%);
             color: transparent;
             transition: color 0.2s;
         }
@@ -42,8 +43,15 @@ nav {
         &:hover::after {
             color: #3DCFB6;
         }
-    }
 
+        &.active {
+            color: #3DCFB6;
+
+            &::after {
+                color: #3DCFB6;
+            }
+        }
+    }
 }
 
 .logo {

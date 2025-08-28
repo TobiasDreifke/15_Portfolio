@@ -9,9 +9,14 @@
                     <div class="language_DE">DE</div>
                 </div>
             </div>
-            <p>About me</p>
-            <p>Skills</p>
-            <p>Projects</p>
+            <a href="#about_me" class="nav_link" [class.active]="activeSection === 'about_me'"
+                (click)="activeSection = 'about_me'">About me</a>
+
+            <a href="#skills" class="nav_link" [class.active]="activeSection === 'skills'"
+                (click)="activeSection = 'skills'">Skills</a>
+
+            <a href="#projects" class="nav_link" [class.active]="activeSection === 'projects'"
+                (click)="activeSection = 'projects'">Projects</a>
         </div>
         <div class="logo">
             <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 788.19 283.67">
