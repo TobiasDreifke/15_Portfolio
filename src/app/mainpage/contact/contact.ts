@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './contact.scss'
 })
 export class Contact {
+  email = 'hello@example.com';
+  subject = 'Hello!';
+  body = 'Hi there 🙂';
 
+  get mailtoLink() {
+    return `mailto:${this.email}?subject=${encodeURIComponent(this.subject)}&body=${encodeURIComponent(this.body)}`;
+  }
 }
+

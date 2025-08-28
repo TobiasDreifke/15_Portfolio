@@ -2,12 +2,14 @@
     <div class="contact_container">
         <div class="columns_wrapper_left">
             <div class="headline_wrapper">
-                <h4>contact me</h4>
-                <h2>let's work together</h2>
-                <p>Explore a selection of my work here -
-                    <br>Interact with projects to see
-                    my skills in action.
+                <h4 class="highlight">contact me</h4>
+                <h2 class="highlight">let's work together</h2>
+                <h4 class="highlight">Got a problem to solve?</h4>
+                <p>Encourage people to contact you and describe what role you are interested in.
+                    Show that you will add
+                    value to their projects through your work.
                 </p>
+                <p>Need a Frontend developer? <span class="highlight">Let’s talk!</span></p>
             </div>
         </div>
         <div class="columns_wrapper_right">
@@ -30,14 +32,14 @@
                 <div class="divider"></div>
                 <div class="checkbox_wrapper">
                     <input type="checkbox">
-                    <p>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
+                    <p>I've read the <a href="#legal" class="highlight">privacy policy</a> and agree to the processing
+                        of my data as outlined.
                     </p>
                 </div>
             </div>
-            <div class="jump_marks">
-                <div class="jump_mark_wrapper">
-                    <p>Check my Work</p>
-                </div>
+
+            <div class="jump_mark_wrapper">
+                <a [href]="mailtoLink" target="_blank">say Hello</a>
             </div>
         </div>
 
