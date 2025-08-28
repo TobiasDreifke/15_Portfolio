@@ -1,8 +1,6 @@
 footer {
     max-width: 1440px;
     height: 200px;
-
-    // margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,16 +17,19 @@ footer {
     >p {
         font-size: 1rem;
         color: #3DCFB6;
+        text-align: center;
     }
 }
 
 .footer_left {
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 0.5rem;
 
     >p {
         font-size: 1rem;
+        align-items: left;
     }
 
     .logo {
