@@ -46,12 +46,6 @@ h4 {
     text-align: center;
 }
 
-h4 .highlight {
-    color: #3DCFB6;
-    font-size: inherit;
-    font-weight: inherit;
-}
-
 h5 {
     font-weight: 400;
     font-size: clamp(1rem, 2vw, 24px);
@@ -62,6 +56,10 @@ p {
     font-weight: 400;
     font-size: clamp(1rem, 1.5vw, 18px);
     text-align: center;
+}
+
+.highlight {
+    color: #3DCFB6;
 }
 
 .cursor-shadow {
@@ -81,9 +79,44 @@ p {
             rgba(60, 207, 182, 0.1) 25%,
             rgba(60, 207, 182, 0) 55%);
 
-    transition: transform 0.02s ease-out; 
+    transition: transform 0.02s ease-out;
 }
 
+@mixin jump-mark($border-color: #D9D9D9,
+    $hover-color: #3DCFB6,
+    $hover-scale: 1.15,
+    $button-scale: 0.95, 
+
+    $padding: 0.5rem 1rem) {
+    border: 1px $border-color solid;
+    border-radius: 2rem;
+    padding: $padding;
+    display: inline-block;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+
+    >a {
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    &:hover {
+        border-color: $hover-color;
+        transform: scale($button-scale); 
+
+        >a {
+            color: $hover-color;
+            transform: scale($hover-scale); 
+        }
+    }
+}
+
+
+.jump_mark_wrapper {
+    @include jump-mark(); 
+}
 
 
 
