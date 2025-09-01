@@ -1,5 +1,6 @@
 @use 'variables' as *;
 
+@use 'mixins' as *;
 
 
 
@@ -107,9 +108,7 @@
 .headline_container {}
 
 .text_container {
-    border: 1px solid #3DCFB6;
-    border-radius: 1rem;
-
+    @include main_wrapper($background_wrapper_color, $border_wrapper_color);
     display: flex;
     flex-direction: column;
     align-items: center;

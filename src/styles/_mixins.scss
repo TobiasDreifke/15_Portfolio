@@ -32,17 +32,20 @@
     }
 }
 
-@mixin flexbox(
-    $d: flex,
-    $fd: column, 
-    $jc: flex-start, 
-    $ai: stretch, 
-    $g: 0 
-
-) {
+@mixin flexbox($d: flex,
+    $fd: column,
+    $jc: flex-start,
+    $ai: stretch,
+    $g: 0) {
     display: $d;
     flex-direction: $fd;
     justify-content: $jc;
     align-items: $ai;
     gap: $g;
+}
+
+@mixin main_wrapper($background_wrapper_color, $border_wrapper_color, $br: 1rem) {
+    background-color: $background_wrapper_color;
+    border: 1px solid $border_wrapper_color;
+    border-radius: $br;
 }

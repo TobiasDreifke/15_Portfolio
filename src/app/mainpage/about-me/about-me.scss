@@ -1,3 +1,7 @@
+@use 'variables' as *;
+
+@use 'mixins' as *;
+
 .about_wrapper {
     max-width: 1440px;
     height: 100vh;
@@ -32,7 +36,7 @@
     overflow: hidden;
 
     border-radius: 1rem;
-    
+
 }
 
 .portrait_container {
@@ -53,6 +57,8 @@
 
     gap: 1rem;
 
+
+
 }
 
 // .wrapper_filler_right {
@@ -68,8 +74,7 @@
 }
 
 .text_container {
-    border: 1px solid #3DCFB6;
-    border-radius: 1rem;
+    @include main_wrapper($background_wrapper_color, $border_wrapper_color);
 
     padding: 1rem;
 
