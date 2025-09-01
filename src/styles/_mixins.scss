@@ -32,4 +32,17 @@
     }
 }
 
+@mixin flexbox(
+    $d: flex,
+    $fd: column, 
+    $jc: flex-start, 
+    $ai: stretch, 
+    $g: 0 
 
+) {
+    display: $d;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+}

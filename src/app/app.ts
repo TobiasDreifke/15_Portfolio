@@ -3,6 +3,9 @@ import { RouterOutlet } from '@angular/router';
 import { Mainpage } from "./mainpage/mainpage";
 import { Footer } from "./shared-pages/footer/footer";
 import { Navbar } from './shared-pages/navbar/navbar';
+import { OnInit } from '@angular/core';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-root',
@@ -19,7 +22,7 @@ export class App {
     if (!cursor) return;
 
     const updateCursor = (e: MouseEvent) => {
-      const rect = cursor.getBoundingClientRect(); 
+      const rect = cursor.getBoundingClientRect();
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
@@ -28,4 +31,9 @@ export class App {
 
     document.addEventListener('mousemove', updateCursor);
   }
+
+  ngOnInit() {
+    AOS.init();
+  }
+
 }

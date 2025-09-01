@@ -4,10 +4,10 @@
             <!-- <div class="wrapper_filler_right">
                 <p>hallo</p>
             </div> -->
-            <div class="headline_container">
+            <div data-aos="fade-up" data-aos-anchor-placement="top_center" class="headline_container">
                 <h4 class="highlight">technologies</h4>
             </div>
-            <div class="text_container">
+            <div data-aos="fade-right" class="text_container">
                 <h2 class="highlight">skillset</h2>
                 <p>A short introduction of your skills. Highlight your experience of using different front-end
                     technologies and emphasise your openness to learning and adapting to new technologies. Show how
@@ -29,8 +29,8 @@
             <div class="icon_container">
                 @for (skill of skillSet; track skill) {
                 <div>
-                    <img src="./assets/img/icons/{{skill.icon}}">
-                    <p>{{skill.language}}</p>
+                    <img data-aos="flip-left" src="./assets/img/icons/{{skill.icon}}">
+                    <p data-aos="flip-left"> {{skill.language}}</p>
                 </div>
                 }
             </div>
