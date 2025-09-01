@@ -1,5 +1,8 @@
 @use 'variables' as *;
 
+
+
+
 .skills_wrapper {
     max-width: 1440px;
     height: 100dvh;
@@ -8,6 +11,9 @@
     justify-content: center;
     align-items: center;
     // background-color: aliceblue;
+    background: radial-gradient(ellipse 30% 30% at left center,
+            rgba(34, 92, 81, 0.5) 0%,
+            rgba(28, 28, 28, 1) 80%);
 
 }
 
