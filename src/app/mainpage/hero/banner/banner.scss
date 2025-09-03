@@ -3,6 +3,8 @@
   box-shadow:
     2px 2px 25px 5px #0000002f,
     -2px -2px 25px 5px #0000002f;
+  position: relative;
+  bottom: 0;
 }
 
 .banner_container {
@@ -10,7 +12,7 @@
   align-items: center;
   background-color: #59bcab1f;
   height: 2rem;
-  
+  position: relative;
 
 }
 
