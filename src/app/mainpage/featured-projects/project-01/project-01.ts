@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Projects } from '../../../interfaces/projects.interface';
 
 @Component({
   selector: 'app-project-01',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './project-01.html',
-  styleUrl: './project-01.scss'
+  styleUrls: ['./project-01.scss']
 })
 export class Project01 {
 
+  @Input()
+  project!: Projects;
+
+  @Input() index!: number;
 }

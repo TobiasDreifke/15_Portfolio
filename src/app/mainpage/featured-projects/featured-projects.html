@@ -2,20 +2,24 @@
     <div class="featured_container">
         <div class="headline_wrapper">
             <h4>portfolio</h4>
-            <h2>featured projects</h2>
+            @for (project of projects; track $index;) {
+            <h2>{{project.name}}</h2>
             <p>
-                Explore a selection of my work here - <br />
-                Interact with projects to see my skills in action.
-            </p>
+                {{project.description}}
+            </p>}
         </div>
 
         <div class="featured_vertical_wrapper">
             <!-- Table -->
             <table>
                 @for (project of projects; track $index;) {
-                <tr (mouseenter)="hoveredIndex = $index" (mouseleave)="hoveredIndex = -1">
+                <tr @if (mouseenter)="$index">
                     <td data-aos="fade-right">{{ project.name }}</td>
-                    <td data-aos="fade-left">{{ project.tech }}</td>
+                    <td data-aos="fade-left">
+                        @for (tech of project.tech; track $index) {
+                        <span>{{ tech.tech }}</span>
+                        }
+                    </td>
                 </tr>
                 }
             </table>
@@ -35,4 +39,6 @@
 
 
 </section>
-<app-project-01></app-project-01>
+@for (project of projects; track project; let index = $index) {
+<app-project-01 [project]="project" [index]="index"></app-project-01>
+}
