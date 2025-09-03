@@ -23,7 +23,8 @@
             <!-- Images -->
             <div class="featured_vertical_container">
                 @for (project of projects; track $index) {
-                <div class="image_wrapper" [class.active]="hoveredIndex === $index" [ngStyle]="{ top: getImageTop($index) }">
+                <div class="image_wrapper" [class.active]="hoveredIndex === $index"
+                    [ngStyle]="{ top: getImageTop($index) }">
                     <div class="image_shadow"></div>
                     <img [src]="project.image" alt="{{ project.name }}" />
                 </div>
@@ -31,4 +32,7 @@
             </div>
         </div>
     </div>
+
+
 </section>
+<app-project-01></app-project-01>

@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Project01 } from './project-01/project-01';
 
 @Component({
   selector: 'app-featured-projects',
-  imports: [CommonModule],
+  imports: [CommonModule, Project01],
   templateUrl: './featured-projects.html',
   styleUrl: './featured-projects.scss'
 })
@@ -33,5 +34,7 @@ export class FeaturedProjects {
     const percentages = [0, 20, 60]; 
     return percentages[index] + '%';
   }
+
+  
 }
 

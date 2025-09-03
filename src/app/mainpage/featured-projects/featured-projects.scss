@@ -1,6 +1,7 @@
 @use 'variables' as *;
  
 .featured_wrapper {
+    position: relative;
     max-width: 1440px;
     // height: 100dvh;
     margin: 0 auto;
