@@ -1,23 +1,15 @@
 .hero_wrapper {
     max-width: 1440px;
     height: calc(100dvh - 100px);
-    margin: 0 auto;
+    // margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; // top stuff + bottom stuff
-    align-items: center;
-
 }
 
 .hero_container {
-    position: relative;
     width: 95%;
     height: 60%;
     // background-color: antiquewhite;
@@ -42,10 +34,6 @@
 }
 
 .diagonal {
-    position: absolute;
-    bottom: 5rem; // pull it up so rotated corner shows
-    left: 0;
-    width: 110%; // make wider so edges don’t get cut off
+    // position: relative;
     transform: rotate(-5deg);
-    transform-origin: bottom center;
 }

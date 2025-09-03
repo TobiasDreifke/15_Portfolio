@@ -1,34 +1,35 @@
 <section class="featured_wrapper">
     <div class="featured_container">
-        <div class="headline_wrapper">
-            <h4>portfolio</h4>
-            <h2>featured projects</h2>
-            <p>
-                Explore a selection of my work here - <br />
-                Interact with projects to see my skills in action.
-            </p>
-        </div>
-
-        <div class="featured_vertical_wrapper">
-            <!-- Table -->
-            <table>
-                @for (project of projects; track $index;) {
-                <tr (mouseenter)="hoveredIndex = $index" (mouseleave)="hoveredIndex = -1">
-                    <td data-aos="fade-right">{{ project.name }}</td>
-                    <td data-aos="fade-left">{{ project.tech }}</td>
-                </tr>
-                }
-            </table>
-
-            <!-- Images -->
-            <div class="featured_vertical_container">
-                @for (project of projects; track $index) {
-                <div class="image_wrapper" [class.active]="hoveredIndex === $index" [ngStyle]="{ top: getImageTop($index) }">
-                    <div class="image_shadow"></div>
-                    <img [src]="project.image" alt="{{ project.name }}" />
-                </div>
-                }
+        <div class="featured_vertical">
+            <div class="headline_wrapper">
+                <h4>portfolio</h4>
+                <h2>featured projects</h2>
+                <p>Explore a selection of my work here -
+                    <br>Interact with projects to see
+                    my skills in action.
+                </p>
             </div>
+            <table>
+                <tr >
+                    <td data-aos="fade-right">Join</td>
+                    <td data-aos="fade-right">Angular | Typescript | HTML | CSS | Firebase</td>
+                </tr>
+                <tr>
+                    <td  data-aos="fade-left">El Pollo Loco</td>
+                    <td  data-aos="fade-left">HTML | CSS | JavaScript</td>
+                </tr>
+                <tr >
+                    <td data-aos="fade-right">DA Bubble</td>
+                    <td data-aos="fade-right">Angular | Firebase | Typescript</td>
+                </tr>
+            </table>
+            <!-- <div class="divider"></div>
+            <h4>portfolio</h4>
+            <div class="divider"></div>
+            <h4>portfolio</h4>
+            <div class="divider"></div>
+            <h4>portfolio</h4>
+            <div class="divider"></div> -->
         </div>
     </div>
 </section>

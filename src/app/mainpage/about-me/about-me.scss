@@ -4,39 +4,32 @@
 
 .about_wrapper {
     max-width: 1440px;
-    max-height: 1280px;
-    min-height: 100vh;
-    margin: 0 auto;
+    height: 100vh;
+    // margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(93, 46, 38);
-    // overflow: scroll;
-    position: relative;
+    // background-color: aliceblue;
+
 }
 
 .about_container {
-    margin: 5rem 5rem;
     width: 95%;
-    // height: 90%;
     // background-color: rgb(6, 42, 74);
-
-    // overflow: hidden;
+    height: 60%;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 5rem;
 }
-
-
 
 
 
 .columns_wrapper_left {
     // background-color: aqua;
     width: 50%;
-    // height: 65%;
+    height: 65%;
 
     display: flex;
     align-items: start;
@@ -47,18 +40,8 @@
 }
 
 .portrait_container {
-    height: 500px;
-    overflow: hidden;
-    border-radius: 1rem;
-
     >img {
         width: 100%;
-        // aspect-ratio: 1 1;
-        border-radius: 1rem;
-
-
-
-
     }
 }
 
