@@ -28,18 +28,16 @@ export class Testimonials {
 
   currentIndex = 0;
 
-  prev() {
-    this.currentIndex =
-      this.currentIndex === 0
-        ? this.testimonials.length - 1
-        : this.currentIndex - 1;
-  }
-
   next() {
-    this.currentIndex =
-      this.currentIndex === this.testimonials.length - 1
-        ? 0
-        : this.currentIndex + 1;
+    this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
   }
 
+  prev() {
+    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+  }
+
+  getTransform(): string {
+    const centerOffset = 58;
+    return `translateX(calc(${centerOffset}% - ${this.currentIndex * 57}%))`;
+  }
 }

@@ -5,9 +5,10 @@
             <h2>Testimonials</h2>
         </div>
 
-        <div class="carousell_wrapper">
-            @for (testimonial of testimonials; let i = $index; track $index) {
-            <div class="carousell_container">
+        <div class="carousell_wrapper" [style.transform]="getTransform()">
+            @for (testimonial of testimonials; track $index) {
+            <div class="carousell_container" [class.active]="$index === currentIndex"
+                [class.next]="$index === currentIndex + 1" [class.prev]="$index === currentIndex - 1">
                 <app-single-testimonial [single_testimonial]="testimonial"></app-single-testimonial>
             </div>
             }
