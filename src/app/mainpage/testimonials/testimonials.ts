@@ -4,6 +4,7 @@ import { Testimonial } from '../../interfaces/testimonial.interface';
 import { CommonModule } from '@angular/common';
 
 
+
 @Component({
   selector: 'app-testimonials',
   imports: [SingleTestimonial, CommonModule],
@@ -27,17 +28,20 @@ export class Testimonials {
   ];
 
   currentIndex = 0;
+  isTransitioning = true;
 
   next() {
-    this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+    this.currentIndex++;
   }
 
   prev() {
-    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+    this.currentIndex--;
+    
   }
 
   getTransform(): string {
-    const centerOffset = 58;
-    return `translateX(calc(${centerOffset}% - ${this.currentIndex * 57}%))`;
+    const centerOffset = 25;
+    return `translateX(calc(${centerOffset}% - ${this.currentIndex * 50}%))`;
   }
+
 }
