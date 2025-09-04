@@ -14,4 +14,10 @@ export class Project01 {
   project!: Projects;
 
   @Input() index!: number;
+
+  @Output() close = new EventEmitter<void>();
+
+  onClose() {
+    this.close.emit();
+  }
 }

@@ -10,7 +10,7 @@ import { Projects } from '../../interfaces/projects.interface';
   styleUrls: ['./featured-projects.scss']
 })
 export class FeaturedProjects {
-  hoveredIndex: number = -1;
+  hoveredIndex: number = 0;
 
   projects: Projects[] = [
     {
@@ -23,8 +23,7 @@ export class FeaturedProjects {
         { tech: 'CSS', image: 'assets/img/icons/css.png' },
         { tech: 'Firebase', image: 'assets/img/icons/firebase.png' }
       ],
-      image: 'assets/img/img/projects/Rectangle-30-1.png',
-      index: 0
+      image: 'assets/img/img/projects/Rectangle 30-2.png',
     },
     {
       name: 'El Pollo Loco',
@@ -32,10 +31,9 @@ export class FeaturedProjects {
       tech: [
         { tech: 'HTML', image: 'assets/img/icons/html.png' },
         { tech: 'CSS', image: 'assets/img/icons/css.png' },
-        { tech: 'JavaScript', image: 'assets/img/icons/js.png' }
+        { tech: 'JavaScript', image: 'assets/img/icons/javascript.png' }
       ],
-      image: 'assets/img/img/projects/Rectangle-30-2.png',
-      index: 1
+      image: 'assets/img/img/projects/Rectangle 30.png',
     },
     {
       name: 'DA Bubble',
@@ -46,15 +44,27 @@ export class FeaturedProjects {
         { tech: 'Typescript', image: 'assets/img/icons/typescript.png' }
       ],
       image: 'assets/img/img/projects/Rectangle 30-1.png',
-      index: 2
     }
   ];
 
 
   getImageTop(index: number): string {
     const totalRows = this.projects.length;
-    const percentages = [0, 20, 60];
+    const percentages = [0, 5, 10];
     return percentages[index] + '%';
+  }
+
+  selectedProject: Projects | null = null;
+  selectedIndex: number | null = null;
+
+  openProject(project: Projects, index: number) {
+    this.selectedProject = project;
+    this.selectedIndex = index;
+  }
+
+  closeProject() {
+    this.selectedProject = null;
+    this.selectedIndex = null;
   }
 
 

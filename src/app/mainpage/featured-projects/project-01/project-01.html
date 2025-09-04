@@ -2,7 +2,7 @@
     <div class="project_container">
         <div class="column_wrapper_left">
 
-            <h4>{{index}}</h4>
+            <h4>{{index + 1}}</h4>
             <h2>{{project.name}}</h2>
             <h3>what is this project about?</h3>
             <p>
@@ -27,7 +27,7 @@
 
         </div>
         <div class="column_wrapper_right">
-            <p>X</p>
+            <p class="close-btn" (click)="onClose()">X</p>
             <div class="image_wrapper">
                 <img src="{{project.image}}" />
             </div>
