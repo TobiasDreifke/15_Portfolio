@@ -95,7 +95,23 @@
 
     padding: 1rem;
 
+    >p {
+      
+    }
+
     >h2 {
         color: #3DCFB6;
+    }
+
+    >div {
+        display: flex;
+        gap: 0.5rem;
+
+        >img {
+            height: 30px;
+        }
+
+        >p {
+        }
     }
 }
