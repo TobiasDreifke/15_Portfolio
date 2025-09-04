@@ -42,6 +42,6 @@
 
 </section>
 @if (selectedProject) {
-<app-project-01 [project]="selectedProject" [index]="selectedIndex!" (close)="closeProject()">
+<app-project-01 [project]="selectedProject" [index]="selectedIndex!" (close)="closeProject()" (next)="goToNextProject()">
 </app-project-01>
 }
