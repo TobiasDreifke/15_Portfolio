@@ -19,8 +19,8 @@
         <div class="caroussel_navigation">
             <p class="arrow" (click)="prev()">&larr;</p>
             <div class="dots">
-                @for (navigation of testimonials; track $index) {
-                <span class="dot" [class.active]="$index === currentIndex"></span>
+                @for (navigation of originalTestimonials; track $index) {
+                <span class="dot" [class.active]="$index === currentIndex % originalTestimonials.length"></span>
                 }
             </div>
             <p class="arrow" (click)="next()">&rarr;</p>
