@@ -10,7 +10,7 @@
     align-items: center;
     overflow: hidden;
     gap: 1rem;
-    background-color: rgb(107, 43, 81);
+    // background-color: rgb(107, 43, 81);
     position: relative;
 }
 
@@ -42,7 +42,7 @@
     pointer-events: none;
     background: radial-gradient(ellipse 80% 200% at center center,
             rgba(0, 0, 0, 0) 40%,
-            rgb(107, 43, 81, 1) 65%);
+            rgb(28, 28, 28) 65%);
     // background-color: #3DCFB6;
 }
 

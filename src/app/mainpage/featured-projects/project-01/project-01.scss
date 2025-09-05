@@ -44,6 +44,8 @@
 }
 
 
+
+
 .column_wrapper_left {
     // background-color: rgb(142, 31, 31);
     width: 50%;
@@ -53,11 +55,28 @@
     align-items: start;
     gap: 1rem;
 
+
+
     .jump_marks {
         display: flex;
         justify-content: space-between;
         gap: 2rem;
+        cursor: pointer;
+
+        .jump_mark_wrapper a {
+            .arrow_diagonal {
+                display: inline-block;
+                transition: transform 0.2s ease;
+            }
+
+            &:hover .arrow_diagonal {
+                transform: scale(1.5);
+            }
+        }
+
     }
+
+
 
     .icon_wrapper {
         display: flex;
@@ -125,6 +144,9 @@
     color: $color_secondary;
     cursor: pointer;
     transition: color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         color: $color_main;
@@ -139,6 +161,8 @@
         transform: scale(1.5);
     }
 }
+
+
 
 .image_wrapper {
     // background-color: #2b3231;
