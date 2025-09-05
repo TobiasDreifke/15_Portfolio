@@ -77,6 +77,31 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
 
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        cursor: pointer;
+        transition: color 0.2s;
+        font-size: 1rem;
+        text-decoration: none;
+
+        &::before {
+            content: '•';
+            color: transparent;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        &:hover {
+            color: #3DCFB6;
+
+            &::before {
+                color: #3DCFB6;
+            }
+        }
+    }
+
     p {
         display: flex;
         align-items: center;
