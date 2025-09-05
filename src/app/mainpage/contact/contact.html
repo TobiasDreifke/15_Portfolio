@@ -13,35 +13,39 @@
             </div>
         </div>
         <div class="columns_wrapper_right">
-            <div class="columns_container_right">
+            <form class="columns_container_right" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="divider"></div>
 
-                <p>what's your name?</p>
-                <input class="input_field_text" type="text" placeholder="your Name goes here">
+                <label for="name">what's your name?</label>
+                <input [(ngModel)]="contactData.name" name="name" id="name" class="input_field_text" type="text"
+                    placeholder="your Name goes here" required>
 
                 <div class="divider"></div>
-
-                <p>what's your email?</p>
-                <input class="input_field_text" type="text" placeholder="yourmail@email.com">
+                <label for="email">what's your email?</label>
+                <input [(ngModel)]="contactData.email" name="email" class="input_field_text" type="text"
+                    placeholder="yourmail@email.com" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
                 <div class="divider"></div>
-
-                <p>how can I help you?</p>
-                <input class="input_field_text" type="text" placeholder="Hello, I am interested in...">
-
+                <label for="message">how can I help you</label>
+                <input #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message"
+                    class="input_field_text" type="text" placeholder="Hello, I am interested in..." required>
+                @if (!message.valid && message.touched) {
+                <span>Please enter a message</span>
+                }
                 <div class="divider"></div>
                 <div class="checkbox_wrapper">
-                    <input type="checkbox">
-                    <p>I've read the <a href="#legal" class="highlight">privacy policy</a> and agree to the processing
+                    <input type="checkbox" required>
+                    <p>I've read the <a routerLink="/legal" class="highlight">privacy policy</a> and agree to the
+                        processing
                         of my data as outlined.
                     </p>
                 </div>
-            </div>
 
-            <div class="jump_mark_wrapper">
-                <a [href]="mailtoLink" target="_blank">say Hello</a>
-            </div>
+                <div class="jump_mark_wrapper">
+                    <input class="jump_marks" type="submit" value="say Hello">
+                </div>
+            </form>
         </div>
-
     </div>
 </section>
