@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -5,51 +6,59 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule,RouterModule],
+  imports: [FormsModule, RouterModule, CommonModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
   standalone: true,
 })
 export class Contact {
 
-  http = inject(HttpClient);
+  private http = inject(HttpClient);
 
+  // form model
   contactData = {
-    name: "",
-    email: "",
-    message: "",
-  }
+    name: '',
+    email: '',
+    message: '',
+    agree: false,
+  };
 
-  mailTest = true;
+ 
+  mailTest = true; 
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
+    body: (payload: any) => payload, 
     options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
+      headers: { 'Content-Type': 'application/json' },
+      responseType: 'text' as const,
     },
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
+    if (!ngForm.valid || !this.contactData.agree) {
+      console.warn('Form invalid or user did not agree');
+      return;
     }
+
+    if (this.mailTest) {
+      console.info('Testing mode – no mail sent', this.contactData);
+      ngForm.resetForm();
+      return;
+    }
+
+    this.http
+      .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+      .subscribe({
+        next: (response) => {
+          console.info('Mail sent successfully:', response);
+          ngForm.resetForm();
+        },
+        error: (error) => {
+          console.error('Error sending mail:', error);
+        },
+        complete: () => console.info('send post complete'),
+      });
   }
 }
 
