@@ -1,41 +1,40 @@
 <section class="skills_wrapper">
     <div class="skills_container">
         <div class="columns_wrapper_left">
-            <!-- <div class="wrapper_filler_right">
-                <p>hallo</p>
-            </div> -->
             <div data-aos="fade-up" data-aos-anchor-placement="top_center" class="headline_container">
                 <h4 class="highlight">technologies</h4>
             </div>
+
             <div data-aos="fade-right" class="text_container">
                 <h2 class="highlight">skillset</h2>
-                <p>A short introduction of your skills. Highlight your experience of using different front-end
-                    technologies and emphasise your openness to learning and adapting to new technologies. Show how
-                    important it is for you to keep up with the rapid changes in web development.</p>
-                <br>
+                <p>
+                    A short introduction of your skills. Highlight your experience with different front-end
+                    technologies and emphasise your openness to learning and adapting to new technologies.
+                    Show how important it is for you to keep up with rapid changes in web development.
+                </p>
+
                 <div>
                     <h4>
                         You need <span class="highlight">another skill?</span>
                     </h4>
                     <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
                 </div>
-                <br>
+
                 <div class="jump_mark_wrapper">
                     <a href="#contact">let's talk</a>
                 </div>
             </div>
         </div>
+
         <div class="columns_wrapper_right">
             <div class="icon_container">
                 @for (skill of skillSet; track skill) {
                 <div>
                     <img data-aos="flip-left" src="./assets/img/icons/{{skill.icon}}">
-                    <p data-aos="flip-left"> {{skill.language}}</p>
+                    <p data-aos="flip-left">{{skill.language}}</p>
                 </div>
                 }
             </div>
         </div>
-
     </div>
-    
 </section>
