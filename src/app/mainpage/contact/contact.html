@@ -19,7 +19,7 @@
                 <label for="name">what's your name?</label>
                 <input [(ngModel)]="contactData.name" name="name" id="name" class="input_field_text"
                     [ngClass]="{ 'input_error': contactForm.submitted && !name.valid }" type="text"
-                    placeholder="{{ contactForm.submitted && !name.valid ? 'please enter your name' : 'your Name goes here' }}"
+                    placeholder="{{ contactForm.submitted && !name.valid ? '*please enter your name' : 'your Name goes here' }}"
                     required #name="ngModel" />
 
                 <div class="divider"></div>
@@ -27,7 +27,7 @@
                 <label for="email">what's your email?</label>
                 <input [(ngModel)]="contactData.email" name="email" id="email" class="input_field_text"
                     [ngClass]="{ 'input_error': contactForm.submitted && !email.valid }" type="email"
-                    placeholder="{{ contactForm.submitted && !email.valid ? 'please enter a valid email' : 'yourmail@email.com' }}"
+                    placeholder="{{ contactForm.submitted && !email.valid ? '*please enter a valid email' : 'yourmail@email.com' }}"
                     required #email="ngModel" />
 
                 <div class="divider"></div>
@@ -35,7 +35,7 @@
                 <label for="message">how can I help you</label>
                 <input [(ngModel)]="contactData.message" name="message" id="message" class="input_field_text"
                     [ngClass]="{ 'input_error': contactForm.submitted && !message.valid }" type="text"
-                    placeholder="{{ contactForm.submitted && !message.valid ? 'please enter a message' : 'Hello, I am interested in...' }}"
+                    placeholder="{{ contactForm.submitted && !message.valid ? '*please enter a message' : 'Hello, I am interested in...' }}"
                     required minlength="4" #message="ngModel" />
 
                 <div class="divider"></div>
@@ -56,9 +56,9 @@
                         <input class="jump_marks" type="submit" value="say Hello" />
                     </div>
                     <ng-container>
-                        @if (contactForm.submitted && !message.valid) {
+                        <!-- @if (contactForm.submitted && !message.valid) {
                         <span class="input_error_text">Input not valid</span>
-                        }
+                        } -->
                         @if (contactForm.submitted && !contactData.agree) {
                         <span class="input_error_text">You must agree to the privacy policy</span>
                         }
