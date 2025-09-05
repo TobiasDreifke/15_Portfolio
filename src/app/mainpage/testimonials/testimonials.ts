@@ -19,7 +19,7 @@ export class Testimonials {
   testimonials: Testimonial[] = [];
 
   currentIndex = 0;
-  isTransitioning = true;
+  isTransitioning = false;
 
   constructor() {
 
@@ -34,17 +34,52 @@ export class Testimonials {
   }
 
 
+  // next() {
+  //   this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+  // }
+
   next() {
-    this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+    if (this.isTransitioning) return;
+    this.isTransitioning = true;
+    this.currentIndex++;
+
+    if (this.currentIndex >= (2 * this.originalTestimonials.length)) {
+      setTimeout(() => {
+        this.isTransitioning = false;
+        this.currentIndex = this.originalTestimonials.length
+      }, 500);
+    } else {
+      setTimeout(() => {
+        this.isTransitioning = false;
+      }, 500);
+    }
   }
 
   prev() {
-    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+    if (this.isTransitioning) return;
+    this.isTransitioning = true;
+    this.currentIndex--;
+
+    if (this.currentIndex < this.originalTestimonials.length) {
+      setTimeout(() => {
+        this.isTransitioning = false;
+        this.currentIndex = (2 * this.originalTestimonials.length) - 1;
+      }, 500);
+    } else {
+      setTimeout(() => {
+        this.isTransitioning = false;
+      }, 500);
+    }
   }
+
+
+  // prev() {
+  //   this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+  // }
 
   getTransform(): string {
     const centerOffset = 25;
-    return `translateX(calc(${centerOffset}% - ${this.currentIndex * 50}%))`;
+    return `translateX(calc(${centerOffset}% - ${this.currentIndex * 45}%))`;
   }
 
 }
