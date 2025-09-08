@@ -24,10 +24,10 @@ export class Contact {
   };
 
  
-  mailTest = true; 
+  mailTest = false; 
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://tobiasdreifke.com/sendMail.php',
     body: (payload: any) => payload, 
     options: {
       headers: { 'Content-Type': 'application/json' },

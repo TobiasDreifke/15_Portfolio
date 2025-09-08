@@ -49,8 +49,7 @@
     justify-content: center;
     gap: 1rem;
 
-    >p {
-        margin-left: 1rem;
+    >label {
         color: $color_main;
     }
 
@@ -58,6 +57,7 @@
         all: unset;
         display: inline-block;
         margin-left: 1rem;
+
 
         &::placeholder {
             color: $color_secondary;
@@ -71,41 +71,52 @@
         width: 100%;
     }
 
-    .checkbox_wrapper {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-        justify-content: center;
 
-        >input {
-            appearance: none;
-            width: 1.5em;
-            aspect-ratio: 1 / 1;
-            border: 2px solid $color_main;
-            border-radius: 0.25em;
-            background-color: transparent;
-            cursor: pointer;
-            position: relative;
-            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
 
-            &:hover {
-                box-shadow: 0 0 6px rgba($color_main, 0.5);
-            }
+.checkbox_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: start;
+    justify-content: start;
+    min-height: 80px;
+}
 
-            &:checked {
-                border-color: $color_main;
+.checkbox_container {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 0.5rem;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    width: 25%;
-                    height: 50%;
-                    border: solid $color_main;
-                    border-width: 0 2px 2px 0;
-                    transform: translate(-50%, -50%) rotate(45deg);
-                }
+    >input {
+        appearance: none;
+        width: 1.5em;
+        aspect-ratio: 1 / 1;
+        border: 2px solid $color_main;
+        border-radius: 0.25em;
+        background-color: transparent;
+        cursor: pointer;
+        position: relative;
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 0 6px rgba($color_main, 0.5);
+        }
+
+        &:checked {
+            border-color: $color_main;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 25%;
+                height: 50%;
+                border: solid $color_main;
+                border-width: 0 2px 2px 0;
+                transform: translate(-50%, -50%) rotate(45deg);
             }
         }
     }
@@ -133,17 +144,17 @@
 }
 
 .input_error {
-    color: $color_main;
+    color: $color_error;
 
     &::placeholder {
-        color: $color_main !important;
+        color: $color_error !important;
         opacity: 1;
     }
 }
 
 .input_error_text,
 span.ng-error {
-    color: $color_main;
+    color: $color_error;
     font-size: 0.9rem;
 }
 
@@ -164,21 +175,21 @@ span.ng-error {
 }
 
 .input_error::placeholder {
-    color: $color_main !important;
+    color: $color_error !important;
 }
 
 .input_error::-webkit-input-placeholder {
-    color: $color_main !important;
+    color: $color_error !important;
 }
 
 .input_error::-moz-placeholder {
-    color: $color_main !important;
+    color: $color_error !important;
 }
 
 .input_error:-ms-input-placeholder {
-    color: $color_main !important;
+    color: $color_error !important;
 }
 
 .input_error::-ms-input-placeholder {
-    color: $color_main !important;
+    color: $color_error !important;
 }
