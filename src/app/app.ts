@@ -5,11 +5,13 @@ import { Footer } from "./shared-pages/footer/footer";
 import { Navbar } from './shared-pages/navbar/navbar';
 import { OnInit } from '@angular/core';
 import AOS from 'aos';
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Mainpage, Footer, Navbar],
+  imports: [RouterOutlet, Mainpage, Footer, Navbar, TranslatePipe,
+    TranslateDirective],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

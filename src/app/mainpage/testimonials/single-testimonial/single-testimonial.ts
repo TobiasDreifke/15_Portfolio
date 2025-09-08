@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Testimonial } from '../../../interfaces/testimonial.interface';
-import { Input } from '@angular/core';
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-single-testimonial',
-  imports: [],
+  imports: [TranslatePipe, TranslateDirective],
   templateUrl: './single-testimonial.html',
   styleUrl: './single-testimonial.scss'
 })

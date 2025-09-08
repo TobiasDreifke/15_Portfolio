@@ -16,7 +16,7 @@
 
 .about_container {
     width: 95%;
-    margin: 5rem;
+    // margin: 5rem;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -146,6 +146,11 @@
 
 
 @media (max-width: 1080px) {
+
+    .about_wrapper {
+        padding-top: 5rem;
+    }
+
     .about_container {
         margin: 0rem;
         flex-direction: column;

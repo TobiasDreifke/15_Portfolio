@@ -40,6 +40,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .columns_container_right {
@@ -192,4 +193,31 @@ span.ng-error {
 
 .input_error::-ms-input-placeholder {
     color: $color_error !important;
+}
+
+// ------------------ REPSONSIVE ----------------
+
+
+@media (max-width: 1080px) {
+    .contact_wrapper {
+        margin: 0rem;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 5rem;
+    }
+
+    .contact_container {
+        width: 95%;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .columns_wrapper_left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
 }

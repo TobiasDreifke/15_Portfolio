@@ -1,19 +1,30 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Component, signal, inject } from '@angular/core';
+import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslatePipe,
+    TranslateDirective],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss'
 })
 export class Navbar {
-  activeLanguage: 'EN' | 'DE' = 'EN';  // default language
+  activeLanguage: 'EN' | 'DE' = 'EN';
+  private translate = inject(TranslateService);
 
   toggleLang() {
     this.activeLanguage = this.activeLanguage === 'EN' ? 'DE' : 'EN';
+    this.translate.use(this.activeLanguage.toLowerCase());
   }
 
-  activeSection: string = ''; 
+  setLanguage(lang: 'EN' | 'DE') {
+    this.activeLanguage = lang;
+    this.translate.use(lang.toLowerCase());
+  }
+
+  activeSection: string = '';
+
 }

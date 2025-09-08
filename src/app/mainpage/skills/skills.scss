@@ -131,13 +131,13 @@
 
     .skills_container {
         margin: 0rem;
-        flex-direction: column; 
+        flex-direction: column;
         gap: 2rem;
     }
 
     .columns_wrapper_right,
     .columns_wrapper_left {
-        width: 100%; 
+        width: 100%;
     }
 
     .columns_wrapper_left {
@@ -146,11 +146,21 @@
 
     .portrait_container {
         .image_portrait_mask {
-            width: 100%; 
+            width: 100%;
         }
 
         &:hover .image_shadow_mask .image_shadow {
             opacity: 0;
         }
+    }
+
+    .icon_container {
+        >div {
+            flex: 0 0 100px;
+        }
+
+        align-content: flex-start;
+        gap: 1rem;
+        justify-content: center;
     }
 }

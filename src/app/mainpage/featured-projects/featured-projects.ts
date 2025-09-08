@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { Project01 } from './project-01/project-01';
 import { Projects } from '../../interfaces/projects.interface';
 import { PROJECTS } from '../../data/projects.data';
+import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-featured-projects',
-  imports: [CommonModule, Project01],
+  imports: [CommonModule, Project01, TranslateModule, TranslatePipe],
   templateUrl: './featured-projects.html',
   styleUrls: ['./featured-projects.scss']
 })

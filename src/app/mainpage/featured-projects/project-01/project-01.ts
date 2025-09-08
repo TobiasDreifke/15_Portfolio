@@ -1,10 +1,11 @@
 import { Component, Input, Output, EventEmitter, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Projects } from '../../../interfaces/projects.interface';
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-01',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './project-01.html',
   styleUrls: ['./project-01.scss']
 })

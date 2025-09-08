@@ -1,46 +1,43 @@
 <section class="featured_wrapper">
-    <div class="featured_container">
-        <div class="headline_wrapper">
-            <h4>portfolio</h4>
-            <h2>Featured Projects</h2>
-            <p>
-                Explore a selection of my work here - Interact with projects to see my skills in action.
-            </p>
-        </div>
-
-        <div class="featured_vertical_wrapper">
-            <!-- Table -->
-            <table>
-                @for (project of projects; track $index;) {
-                <tr (mouseenter)="hoveredIndex = $index" (mouseleave)="hoveredIndex = -1"
-                    (click)="openProject(project, $index)">
-                    <td data-aos="fade-right">{{ project.name }}</td>
-                   <td data-aos="fade-left">
-    @for (tech of project.tech; track $index) {
-        <span class="tech_name">
-            {{ tech.tech }}
-        </span>
-    }
-</td>
-                </tr>
-                }
-            </table>
-
-            <!-- Images -->
-            <div class="featured_vertical_container">
-                @for (project of projects; track $index) {
-                <div class="image_wrapper" [class.active]="hoveredIndex === $index"
-                    [ngStyle]="{ top: getImageTop($index) }">
-                    <div class="image_shadow"></div>
-                    <img [src]="project.image" alt="{{ project.name }}" />
-                </div>
-                }
-            </div>
-        </div>
+  <div class="featured_container">
+    <div class="headline_wrapper">
+      <h4>{{ 'projects.headline' | translate }}</h4>
+      <h2>{{ 'projects.featured' | translate }}</h2>
+      <p>{{ 'projects.description' | translate }}</p>
     </div>
 
+    <div class="featured_vertical_wrapper">
+      <!-- Table -->
+      <table>
+        @for (project of projects; track $index;) {
+        <tr (mouseenter)="hoveredIndex = $index" (mouseleave)="hoveredIndex = -1"
+            (click)="openProject(project, $index)">
+          <td data-aos="fade-right">{{ project.nameKey | translate }}</td>
+          <td data-aos="fade-left">
+            @for (tech of project.tech; track $index) {
+            <span class="tech_name">
+              {{ tech.tech }}
+            </span>
+            }
+          </td>
+        </tr>
+        }
+      </table>
 
+      <!-- Images -->
+      <div class="featured_vertical_container">
+        @for (project of projects; track $index) {
+        <div class="image_wrapper" [class.active]="hoveredIndex === $index"
+             [ngStyle]="{ top: getImageTop($index) }">
+          <div class="image_shadow"></div>
+          <img [src]="project.image" alt="{{ project.nameKey | translate }}" />
+        </div>
+        }
+      </div>
+    </div>
+  </div>
 </section>
+
 @if (selectedProject) {
 <app-project-01 [project]="selectedProject" [index]="selectedIndex!" (close)="closeProject()" (next)="goToNextProject()">
 </app-project-01>

@@ -1,0 +1,94 @@
+{
+    "parameter": "Einfache Übersetzung ohne Parameter",
+    "hero": {
+        "h3": "Frontend Entwickler",
+        "h1": "Tobias Dreifke",
+        "projects": "meine Arbeiten",
+        "contact": "schreib mir"
+    },
+    "navbar": {
+        "about": "Über mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte"
+    },
+    "banner": {
+        "fullstack": "Full-Stack Entwickler",
+        "openToWork": "Offen für neue Projekte",
+        "basedIn": "Basierend in Berlin",
+        "remote": "Verfügbar für Remote-Arbeit"
+    },
+    "about_me": {
+        "headline": "Wer ich bin",
+        "title": "Über mich",
+        "intro": "Hallo, ich bin Lukas! Schreibe hier ein paar IT-bezogene Infos über dich. Warum bist du leidenschaftlich am Programmieren interessiert? Was motiviert dich, deine Programmierfähigkeiten zu verbessern?",
+        "question1": "Wo bist du ansässig? Bist du offen für Remote-Arbeit oder einen Umzug?",
+        "question2": "Zeige, dass du aufgeschlossen bist. Bist du begeistert, neue Technologien zu lernen?",
+        "question3": "Beschreibe deinen Ansatz zur Problemlösung. Lernst du aus Herausforderungen und suchst nach effizienten Lösungen? Schlagworte: analytisches Denken, Kreativität, Ausdauer, Zusammenarbeit."
+    },
+    "skills": {
+        "technologies": "Technologien",
+        "skillset": "Fähigkeiten",
+        "intro": "Eine kurze Einführung in deine Fähigkeiten. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit, neue Technologien zu lernen und dich anzupassen. Zeige, wie wichtig es für dich ist, mit den schnellen Veränderungen in der Webentwicklung Schritt zu halten.",
+        "anotherSkill": "Du brauchst eine weitere Fähigkeit?",
+        "contactMe": "Kontaktiere mich gerne. Ich freue mich darauf, mein Wissen weiter auszubauen.",
+        "letsTalk": "Lass uns sprechen"
+    },
+    "contact": {
+        "contactMe": "kontaktiere mich",
+        "letsWorkTogether": "lass uns zusammenarbeiten",
+        "gotProblem": "Hast du ein Problem zu lösen?",
+        "encourageText": "Ermutige die Leute, dich zu kontaktieren, und beschreibe, welche Rolle dich interessiert. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte bringst.",
+        "needFrontend": "Brauchst du einen Frontend-Entwickler?",
+        "letsTalk": "Lass uns sprechen!",
+        "labelName": "Wie heißt du?",
+        "placeholderName": "Dein Name hier",
+        "placeholderNameError": "*bitte gib deinen Namen ein",
+        "labelEmail": "Wie lautet deine E-Mail?",
+        "placeholderEmail": "deinemail@email.com",
+        "placeholderEmailError": "*bitte gib eine gültige E-Mail ein",
+        "labelMessage": "Wie kann ich dir helfen?",
+        "placeholderMessage": "Hallo, ich interessiere mich für...",
+        "placeholderMessageError": "*bitte gib eine Nachricht ein",
+        "privacyText1": "Ich habe die",
+        "privacyText2": "Datenschutzerklärung",
+        "privacyText3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+        "privacyError": "Du musst der Datenschutzerklärung zustimmen",
+        "sayHello": "Sag Hallo"
+    },
+    "testimonials": {
+        "headline": "Was meine Kollegen über mich sagen",
+        "first": {
+            "text": "Lukas ist ein großartiger Kollaborateur. Seine Problemlösungsfähigkeiten sind erstklassig.",
+            "author": "H. Janisch – Team Partner"
+        },
+        "second": {
+            "text": "Die Zusammenarbeit mit Lukas macht Freude. Er liefert konsequent hochwertige Arbeit.",
+            "author": "M. Schmidt – Projektleiter"
+        },
+        "third": {
+            "text": "Lukas geht immer die Extra-Meile, um den Erfolg des Teams zu sichern.",
+            "author": "S. Keller – Kollege"
+        }
+    },
+    "projects": {
+        "headline": "Portfolio",
+        "featured": "Ausgewählte Projekte",
+        "description": "Entdecke hier eine Auswahl meiner Arbeiten – Interagiere mit Projekten, um meine Fähigkeiten live zu sehen.",
+        "about": "Worum geht es in diesem Projekt?",
+        "nextProject": "Nächstes Projekt",
+        "github": "Github",
+        "liveTest": "Live-Test",
+        "join": {
+            "name": "Join",
+            "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop, weise Benutzer und Kategorien zu."
+        },
+        "elpollo": {
+            "name": "El Pollo Loco",
+            "description": "Jump, Run und Throw-Game basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+        },
+        "dabubble": {
+            "name": "DA Bubble",
+            "description": "Diese App ist ein Slack-Clone. Sie revolutioniert die Teamkommunikation mit intuitiver Oberfläche, Echtzeitnachrichten und robuster Kanalorganisation."
+        }
+    }
+}

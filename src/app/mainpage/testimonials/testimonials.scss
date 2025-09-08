@@ -180,3 +180,31 @@
         }
     }
 }
+
+
+// ------------------ REPSONSIVE ----------------
+
+
+@media (max-width: 1080px) {
+    .testi_wrapper {
+        margin: 0rem;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 5rem;
+    }
+
+    .testi_container {
+        width: 95%;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .columns_wrapper_left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+}

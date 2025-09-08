@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
+import {TranslatePipe, TranslateDirective, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-banner',
-  imports: [],
+  imports: [TranslatePipe, TranslateDirective],
   templateUrl: './banner.html',
   styleUrl: './banner.scss'
 })
