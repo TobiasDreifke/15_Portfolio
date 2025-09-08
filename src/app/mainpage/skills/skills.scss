@@ -34,6 +34,20 @@
     gap: 1rem;
 }
 
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .icon_container {
     width: 100%;
     display: flex;
@@ -42,7 +56,7 @@
     align-items: flex-start;
     gap: 2rem;
 
-    > div {
+    >div {
         flex: 0 0 150px;
         display: flex;
         flex-direction: column;
@@ -50,37 +64,43 @@
         justify-content: center;
         gap: 0.2rem;
 
-        > img {
+        >img {
             width: 50px;
             height: 50px;
             object-fit: contain;
-            transition: transform 0.3s ease;
 
-            &:hover {
-                transform: translateY(-1rem);
+            &.animate {
+                animation: floatUp 0.6s ease forwards; 
             }
         }
 
-        > p {
+        >p {
             text-align: center;
         }
     }
 }
 
-.headline_container {
-}
+.headline_container {}
 
 .text_container {
     @include main_wrapper($background_wrapper_color, $border_wrapper_color);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    gap: 1rem;
     padding: 1rem;
 
-    > div {
-        > h4 .highlight {
+
+    >div {
+        >h4 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        >h4 .highlight {
             font-size: inherit;
             font-weight: inherit;
+
         }
     }
 }

@@ -42,7 +42,7 @@ export class Skills {
       language: "Git",
       icon: "git.png",
     },
-       {
+    {
       language: "REST-API",
       icon: "rest-api.png",
     },
@@ -57,7 +57,13 @@ export class Skills {
   ]
 
 
+  triggerAnimation(img: HTMLElement) {
+    img.classList.add('animate');
 
+    setTimeout(() => img.classList.remove('animate'), 600);
+  }
+
+  
 
 
 
