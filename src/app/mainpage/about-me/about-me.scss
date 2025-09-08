@@ -21,6 +21,7 @@
     justify-content: space-between;
     gap: 1rem;
     align-items: stretch;
+    transition: all 0.5s ease;
 }
 
 .columns_wrapper_left {
@@ -128,8 +129,46 @@
     }
 }
 
+.columns_wrapper_left,
+.columns_wrapper_right {
+    transition: width 0.25s ease;
+}
+
+.portrait_container .image_portrait_mask {
+    transition: width 0.25s ease;
+}
+
+.text_container>div>p {
+    transition: transform 0.25s ease,
+}
+
 // ------------------ REPSONSIVE ----------------
 
-@media (max-width: 700px) {
-    /* … */
+
+@media (max-width: 1080px) {
+    .about_container {
+        margin: 0rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .columns_wrapper_right {
+        width: 100%;
+    }
+
+    .columns_wrapper_left {
+        width: 100%;
+        padding-bottom: 0rem;
+    }
+
+    .portrait_container {
+
+        .image_portrait_mask {
+            width: 100%;
+        }
+
+        &:hover .image_shadow_mask .image_shadow {
+            opacity: 0;
+        }
+    }
 }

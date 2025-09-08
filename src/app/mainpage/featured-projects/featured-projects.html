@@ -15,13 +15,13 @@
                 <tr (mouseenter)="hoveredIndex = $index" (mouseleave)="hoveredIndex = -1"
                     (click)="openProject(project, $index)">
                     <td data-aos="fade-right">{{ project.name }}</td>
-                    <td data-aos="fade-left">
-                        @for (tech of project.tech; track $index) {
-                        <span class="tech_name">
-                            {{ tech.tech }}
-                            @if ($index < project.tech.length - 1) { &nbsp;|&nbsp; } </span>
-                                }
-                    </td>
+                   <td data-aos="fade-left">
+    @for (tech of project.tech; track $index) {
+        <span class="tech_name">
+            {{ tech.tech }}
+        </span>
+    }
+</td>
                 </tr>
                 }
             </table>

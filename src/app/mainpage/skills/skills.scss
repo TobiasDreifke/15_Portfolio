@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: padding-top 0.25s ease;
 }
 
 .skills_container {
@@ -16,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 5rem;
+    transition: margin 0.25s ease, gap 0.25s ease;
 }
 
 .columns_wrapper_left {
@@ -55,6 +57,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 2rem;
+    //  transition: gap 0.25s ease;
 
     >div {
         flex: 0 0 150px;
@@ -63,19 +66,22 @@
         align-items: center;
         justify-content: center;
         gap: 0.2rem;
+        // transition: gap 0.25s ease;
 
         >img {
             width: 50px;
             height: 50px;
             object-fit: contain;
+            //  transition: width 0.25s ease, height 0.25s ease;
 
             &.animate {
-                animation: floatUp 0.6s ease forwards; 
+                animation: floatUp 0.6s ease forwards;
             }
         }
 
         >p {
             text-align: center;
+            // transition: transform 0.25s ease, color 0.25s ease;
         }
     }
 }
@@ -101,6 +107,50 @@
             font-size: inherit;
             font-weight: inherit;
 
+        }
+    }
+}
+
+.columns_wrapper_left,
+.columns_wrapper_right {
+    transition: width 0.25s ease;
+}
+
+.text_container>div>p {
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+// ------------------ REPSONSIVE ----------------
+
+
+@media (max-width: 990px) {
+
+    .skills_wrapper {
+        padding-top: 5rem;
+    }
+
+    .skills_container {
+        margin: 0rem;
+        flex-direction: column; 
+        gap: 2rem;
+    }
+
+    .columns_wrapper_right,
+    .columns_wrapper_left {
+        width: 100%; 
+    }
+
+    .columns_wrapper_left {
+        padding-bottom: 0rem;
+    }
+
+    .portrait_container {
+        .image_portrait_mask {
+            width: 100%; 
+        }
+
+        &:hover .image_shadow_mask .image_shadow {
+            opacity: 0;
         }
     }
 }
