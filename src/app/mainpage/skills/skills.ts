@@ -5,7 +5,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
 
 @Component({
   selector: 'app-skills',
-  imports: [CommonModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './skills.html',
   styleUrl: './skills.scss'
 })

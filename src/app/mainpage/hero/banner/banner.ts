@@ -3,7 +3,7 @@ import {TranslatePipe, TranslateDirective, TranslateService} from '@ngx-translat
 
 @Component({
   selector: 'app-banner',
-  imports: [TranslatePipe, TranslateDirective],
+  imports: [TranslatePipe],
   templateUrl: './banner.html',
   styleUrl: './banner.scss'
 })

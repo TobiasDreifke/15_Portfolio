@@ -5,8 +5,7 @@ import {TranslatePipe, TranslateDirective, TranslateService} from '@ngx-translat
 
 @Component({
   selector: 'app-hero',
-  imports: [Banner, TopElements,  TranslatePipe,
-    TranslateDirective],
+  imports: [Banner, TopElements,  TranslatePipe],
   templateUrl: './hero.html',
   styleUrl: './hero.scss'
 })

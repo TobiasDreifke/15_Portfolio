@@ -8,8 +8,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
 
 @Component({
   selector: 'app-testimonials',
-  imports: [SingleTestimonial, CommonModule, TranslatePipe,
-    TranslateDirective],
+  imports: [SingleTestimonial, CommonModule, TranslatePipe],
   templateUrl: './testimonials.html',
   styleUrl: './testimonials.scss'
 })
@@ -84,8 +83,8 @@ export class Testimonials {
   // }
 
   getTransform(): string {
-    const centerOffset = 25;
-    return `translateX(calc(${centerOffset}% - ${this.currentIndex * 45}%))`;
+    const centerOffset = 50;
+    return `translateX(calc(${centerOffset}% - ${this.currentIndex * 50}%))`;
   }
 
 }

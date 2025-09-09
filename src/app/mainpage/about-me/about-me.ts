@@ -4,7 +4,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
 
 @Component({
   selector: 'app-about-me',
-  imports: [TranslatePipe, TranslateDirective],
+  imports: [TranslatePipe],
   templateUrl: './about-me.html',
   styleUrl: './about-me.scss'
 })

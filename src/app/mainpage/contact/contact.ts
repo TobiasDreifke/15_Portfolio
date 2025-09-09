@@ -8,7 +8,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule, RouterModule, CommonModule, TranslateDirective,TranslatePipe],
+  imports: [FormsModule, RouterModule, CommonModule,TranslatePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
   standalone: true,

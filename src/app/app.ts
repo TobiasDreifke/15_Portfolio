@@ -10,8 +10,7 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Mainpage, Footer, Navbar, TranslatePipe,
-    TranslateDirective],
+  imports: [RouterOutlet, Footer, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

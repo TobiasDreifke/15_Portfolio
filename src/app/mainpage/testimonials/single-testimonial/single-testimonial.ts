@@ -4,7 +4,7 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-single-testimonial',
-  imports: [TranslatePipe, TranslateDirective],
+  imports: [TranslatePipe],
   templateUrl: './single-testimonial.html',
   styleUrl: './single-testimonial.scss'
 })
