@@ -28,19 +28,22 @@ export class FeaturedProjects {
   openProject(project: Projects, index: number) {
     this.selectedProject = project;
     this.selectedIndex = index;
+    document.body.style.overflow = 'hidden';
   }
 
   closeProject() {
     this.selectedProject = null;
     this.selectedIndex = null;
+    document.body.style.overflow = '';
   }
 
   goToNextProject() {
     this.selectedIndex = (this.selectedIndex! + 1) % this.projects.length;
 
-   this.selectedProject = this.projects[this.selectedIndex!];
+    this.selectedProject = this.projects[this.selectedIndex!];
 
   }
+
 
 }
 

@@ -24,10 +24,12 @@
     &:hover {
         border-color: $hover-color;
         transform: scale($button-scale);
+        cursor: pointer;
 
         >a {
             color: $hover-color;
             transform: scale($hover-scale);
+            cursor: pointer;
         }
     }
 }

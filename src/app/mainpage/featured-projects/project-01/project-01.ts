@@ -5,7 +5,7 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-01',
-  imports: [CommonModule, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './project-01.html',
   styleUrls: ['./project-01.scss']
 })
@@ -25,5 +25,15 @@ export class Project01 {
 
   onNext() {
     this.next.emit();
+  }
+
+
+
+  ngOnInit() {
+    document.body.classList.add('no-scroll');
+  }
+
+  ngOnDestroy() {
+    document.body.classList.remove('no-scroll');
   }
 }

@@ -11,20 +11,31 @@
     justify-content: center;
     background-color: rgb(24, 26, 26, 0.8);
     backdrop-filter: blur(8px);
+
+
 }
 
 .project_container {
+    width: 95%;
+    min-height: 50%;
     z-index: 9999;
     background: linear-gradient(35deg, rgba(28, 28, 28, 100) 50%, rgba(34, 92, 81, 1) 100%);
     display: flex;
     justify-content: space-between;
     padding: 3rem;
+    overflow-y: auto;
+
     border-radius: 1rem;
     border-color: $color_main;
     border-style: solid;
-    border-width: 0;
-    border-left-width: 1px;
-    border-bottom-width: 1px;
+    border-width: 1px;
+    border-left-width: 3px;
+    border-bottom-width: 3px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+
+    padding: 1.5rem;
+    overflow-y: auto;
 }
 
 .jump_marks {
@@ -151,16 +162,43 @@
 /* ---------- Responsive ---------- */
 
 @media (max-width: 880px) {
+
+    .project_wrapper {
+        position: fixed;
+        // inset: 0;
+        width: 100dvw;
+        height: 100dvh;
+        z-index: 666;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(24, 26, 26, 0.8);
+        backdrop-filter: blur(8px);
+        border-radius: 1rem;
+    }
+
     .project_container {
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 2rem;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
+        width: 95%;
+        height: 95%;
+
+        border-radius: 1rem;
+        border-color: $color_main;
+        border-style: solid;
+        border-width: 1px;
+        border-left-width: 3px;
+        border-bottom-width: 3px;
+        border-right-width: 1px;
+        border-top-width: 1px;
+
         padding: 1.5rem;
+        overflow-y: auto;
     }
+
+
 
     .column_wrapper_left {
         width: 100%;

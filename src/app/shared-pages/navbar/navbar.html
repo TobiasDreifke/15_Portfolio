@@ -1,24 +1,9 @@
 <nav>
+    <!-- Mobile backdrop overlay -->
+    <div class="mobile-backdrop" *ngIf="isMenuOpen" (click)="toggleMenu()"></div>
+    
     <div class="nav_container">
-        <div class="navbar_left">
-            <div class="language_wrapper">
-                <div class="language_switcher"
-                    [ngClass]="{'active_EN': activeLanguage === 'EN', 'active_DE': activeLanguage === 'DE'}"
-                    (click)="toggleLang()">
-                    <div class="language_EN">EN</div>
-                    <div class="language_DE">DE</div>
-                </div>
-            </div>
-
-            <a href="#about_me" class="nav_link" [class.active]="activeSection === 'about_me'"
-                (click)="activeSection = 'about_me'">{{ 'navbar.about' | translate }}</a>
-
-            <a href="#skills" class="nav_link" [class.active]="activeSection === 'skills'"
-                (click)="activeSection = 'skills'">{{ 'navbar.skills' | translate }}</a>
-
-            <a href="#projects" class="nav_link" [class.active]="activeSection === 'projects'"
-                (click)="activeSection = 'projects'">{{ 'navbar.projects' | translate }}</a>
-        </div>
+        <!-- Logo left (mobile), center (desktop via CSS ordering) -->
         <div class="logo">
             <a routerLink="/"><svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" version="1.1"
                     viewBox="0 0 788.19 283.67">
@@ -33,7 +18,7 @@
                             }
                         </style>
                     </defs>
-                    <!-- Generator: Adobe Illustrator 28.7.2, SVG Export Plug-In . SVG Version: 1.2.0 Build 154)  -->
+                    Generator: Adobe Illustrator 28.7.2, SVG Export Plug-In . SVG Version: 1.2.0 Build 154)
                     <g>
                         <g id="Ebene_1">
                             <g>
@@ -73,6 +58,34 @@
                     </g>
                 </svg>
             </a>
+        </div>
+
+        <!-- Desktop menu + language switch -->
+        <div class="navbar_left" [class.open]="isMenuOpen">
+            <div class="language_wrapper">
+                <div class="language_switcher"
+                    [ngClass]="{'active_EN': activeLanguage === 'EN', 'active_DE': activeLanguage === 'DE'}"
+                    (click)="toggleLang()">
+                    <div class="language_EN">EN</div>
+                    <div class="language_DE">DE</div>
+                </div>
+            </div>
+
+            <a href="#about_me" class="nav_link" [class.active]="activeSection === 'about_me'"
+                (click)="setActive('about_me')">{{ 'navbar.about' | translate }}</a>
+
+            <a href="#skills" class="nav_link" [class.active]="activeSection === 'skills'"
+                (click)="setActive('skills')">{{ 'navbar.skills' | translate }}</a>
+
+            <a href="#projects" class="nav_link" [class.active]="activeSection === 'projects'"
+                (click)="setActive('projects')">{{ 'navbar.projects' | translate }}</a>
+        </div>
+
+        <!-- Burger (visible only on mobile) -->
+        <div class="burger" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 </nav>
