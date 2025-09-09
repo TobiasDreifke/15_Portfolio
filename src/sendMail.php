@@ -26,7 +26,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         }
 
         // Recipient & subject
-        $recipient = "mail@tobiasdreifke.com";   // <-- change to your inbox
+        $recipient = "mail@tobiasdreifke.com";  
         $subject   = "Contact Form Submission from {$name} <{$email}>";
 
         // Plain text version (safe fallback)
@@ -47,7 +47,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         // Headers
         $headers   = [];
         $headers[] = "MIME-Version: 1.0";
-        $headers[] = "From: noreply@tobiasdreifke.com";  // MUST exist in your hosting mail accounts
+        $headers[] = "From: noreply@tobiasdreifke.com"; 
         $headers[] = "Reply-To: {$email}";
         $headers[] = "Content-Type: multipart/alternative; boundary=\"{$boundary}\"";
 
