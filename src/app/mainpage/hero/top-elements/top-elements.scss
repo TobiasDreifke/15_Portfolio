@@ -1,10 +1,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-
-
-
-
 .top_wrapper {
     position: absolute;
     top: 0;
@@ -15,26 +11,22 @@
     pointer-events: none;
 }
 
-
 .top_container {
-    // background-color: #302828d6;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: end;
     pointer-events: none;
-
 }
 
 .line {
     width: 1px;
     pointer-events: none;
-
 }
 
 .left {
-    margin-left:  10%;
+    margin-left: 10%;
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -43,8 +35,6 @@
     pointer-events: none;
     background: $color_main;
     transition: all 0.25s ease;
-
-
 }
 
 .rotate_jump_mark {
@@ -53,10 +43,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // gap: 1rem;
     pointer-events: auto;
     height: 30px;
-    // cursor: pointer;
 }
 
 .jump_mark_wrapper {
@@ -69,11 +57,9 @@
     cursor: pointer;
 }
 
-
 .jump_mark_wrapper a {
     animation: floatY 4s linear infinite;
     pointer-events: auto;
-    // text-align: left;
     height: 2rem;
     width: 2rem;
     font-size: 1.5rem;
@@ -122,15 +108,12 @@
     margin-right: 10%;
     height: 30%;
     background: $color_secondary;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     pointer-events: none;
     transition: all 0.25s ease;
-
-    // gap: 2rem;
 }
 
 .line_right_content {
@@ -139,8 +122,6 @@
     display: flex;
     gap: 1rem;
     pointer-events: auto;
-
-
 
     .icon_wrapper {
         position: relative;
@@ -191,9 +172,6 @@
     display: block;
 }
 
-
-// -------------- RESPONSIVE ----------------
-
 @media (max-width: 800px) {
     .d_none_icon {
         position: relative;
@@ -238,14 +216,18 @@
         pointer-events: auto;
     }
 
+   
+
     .right {
         margin-right: 10%;
         height: 20%;
-
     }
 
     .left {
         margin-left: 10%;
         height: 10%;
     }
+
+    .rotate_jump_mark {
+    padding-left: 7rem;}
 }

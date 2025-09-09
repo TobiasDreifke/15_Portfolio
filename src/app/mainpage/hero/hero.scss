@@ -40,7 +40,7 @@
 
 .diagonal {
     position: absolute;
-    bottom: 10%;
+    bottom: 14%;
     left: 0;
     width: 110%;
     transform: rotate(-5deg);
@@ -59,7 +59,7 @@
 @media (max-width: 800px) {
     .diagonal {
         position: absolute;
-        bottom: 5%;
+        bottom: 12%;
         left: 0;
         width: 110%;
         transform: rotate(-5deg);
