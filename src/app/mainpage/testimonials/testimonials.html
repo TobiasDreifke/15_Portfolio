@@ -4,12 +4,9 @@
             <h5>{{ 'testimonials.headline' | translate }}</h5>
         </div>
 
-        <div class="carousell_wrapper" [class.transitioning]="isTransitioning" [style.transform]="getTransform()">
-            @for (testimonial of testimonials; track $index) {
-            <div class="carousell_container" 
-                 [class.active]="$index === currentIndex"
-                 [class.prev]="$index === (currentIndex - 1 + testimonials.length) % testimonials.length"
-                 [class.next]="$index === (currentIndex + 1) % testimonials.length">
+        <div class="carousell_wrapper" >
+            @for (testimonial of visibleItems; track $index) {
+            <div class="carousell_container" [class.active]="$index===1">
                 <app-single-testimonial [single_testimonial]="testimonial"></app-single-testimonial>
             </div>
             }
@@ -18,8 +15,8 @@
         <div class="caroussel_navigation">
             <p class="arrow" (click)="prev()">&larr;</p>
             <div class="dots">
-                @for (testimonial of originalTestimonials; track $index) {
-                <span class="dot" [class.active]="$index === currentIndex % originalTestimonials.length"></span>
+                @for (testimonial of testimonials; track $index) {
+                <span class="dot" [class.active]="$index === currentIndex" (click)="goTo($index)"></span>
                 }
             </div>
             <p class="arrow" (click)="next()">&rarr;</p>

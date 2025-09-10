@@ -1,90 +1,44 @@
-import { SingleTestimonial } from "./single-testimonial/single-testimonial";
+import { Component } from '@angular/core';
 import { Testimonial } from '../../interfaces/testimonial.interface';
-import { CommonModule } from '@angular/common';
+import { SingleTestimonial } from './single-testimonial/single-testimonial';
 import { TESTIMONIALS } from '../../data/testimonials.data';
-import { Component, signal, inject } from '@angular/core';
-import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-translate/core';
-
+import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-testimonials',
   imports: [SingleTestimonial, CommonModule, TranslatePipe],
   templateUrl: './testimonials.html',
-  styleUrl: './testimonials.scss'
+  styleUrls: ['./testimonials.scss']
 })
 export class Testimonials {
-
-  private translate = inject(TranslateService);
-
-  originalTestimonials: Testimonial[] = [];
-  testimonials: Testimonial[] = [];
-
+  testimonials: Testimonial[] = TESTIMONIALS;
   currentIndex = 0;
-  isTransitioning = false;
 
-  constructor() {
-    this.originalTestimonials = TESTIMONIALS; 
-
-    this.testimonials = [
-      ...this.originalTestimonials,
-      ...this.originalTestimonials,
-      ...this.originalTestimonials
-    ];
-
-    this.currentIndex = this.originalTestimonials.length;
-  }
-
-  // ... next(), prev(), getTransform() bleiben gleich
-
-
-
-
-  // next() {
-  //   this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
-  // }
-
-  next() {
-    if (this.isTransitioning) return;
-    this.isTransitioning = true;
-    this.currentIndex++;
-
-    if (this.currentIndex >= (2 * this.originalTestimonials.length)) {
-      setTimeout(() => {
-        this.isTransitioning = false;
-        this.currentIndex = this.originalTestimonials.length
-      }, 500);
-    } else {
-      setTimeout(() => {
-        this.isTransitioning = false;
-      }, 500);
-    }
+  get visibleItems(): Testimonial[] {
+    const length = this.testimonials.length;
+    const prev = this.testimonials[(this.currentIndex - 1 + length) % length];
+    const current = this.testimonials[this.currentIndex];
+    const next = this.testimonials[(this.currentIndex + 1) % length];
+    return [prev, current, next];
   }
 
   prev() {
-    if (this.isTransitioning) return;
-    this.isTransitioning = true;
-    this.currentIndex--;
-
-    if (this.currentIndex < this.originalTestimonials.length) {
-      setTimeout(() => {
-        this.isTransitioning = false;
-        this.currentIndex = (2 * this.originalTestimonials.length) - 1;
-      }, 500);
-    } else {
-      setTimeout(() => {
-        this.isTransitioning = false;
-      }, 500);
-    }
+    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
   }
 
-
-  // prev() {
-  //   this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
-  // }
-
-  getTransform(): string {
-    const centerOffset = 50;
-    return `translateX(calc(${centerOffset}% - ${this.currentIndex * 50}%))`;
+  next() {
+    this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
   }
 
+  goTo(index: number) {
+    this.currentIndex = index;
+  }
+
+  get wrapperTransform(): string {
+  const boxWidth = 600; 
+  const gap = 32;
+  const offset = (boxWidth + gap) * this.currentIndex;
+  return `translateX(-${offset}px)`;
+}
 }
