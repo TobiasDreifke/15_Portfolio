@@ -2,21 +2,30 @@
 @use "mixins" as *;
 
 .testi_wrapper {
+    // max-width: 1440px;
+    //   max-width: 1440px;
+    // min-height: 100vh;
+    // margin: 0 auto;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // overflow: hidden;
+    // gap: 1rem;
+    // position: relative;
+    min-height: 100dvh; // full viewport
     max-width: 1440px;
-      max-width: 1440px;
-    min-height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     overflow: hidden;
     gap: 1rem;
-    position: relative;
 }
 
 .testi_container {
     width: 95%;
-    margin: 5rem 5rem;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +43,7 @@
     pointer-events: none;
     background: radial-gradient(ellipse 80% 200% at center center,
             rgba(0, 0, 0, 0) 40%,
-            rgb(28, 28, 28) 65%);
+            rgb(28, 28, 28) 55%);
 }
 
 .headline_wrapper {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Hero } from "./hero/hero";
 import { AboutMe } from "./about-me/about-me";
 import { FeaturedProjects } from "./featured-projects/featured-projects";
@@ -14,4 +14,44 @@ import { Skills } from './skills/skills';
 })
 export class Mainpage {
 
+
+  private currentSection = 0;
+  private sections: HTMLElement[] = [];
+
+
+    private isMobile = false;
+
+  ngAfterViewInit() {
+    // Select all sections
+    this.sections = Array.from(
+      document.querySelectorAll('app-hero, app-about-me, app-skills, app-featured-projects, app-testimonials, app-contact, app-footer')
+    );
+
+    // Determine if mobile (you can adjust breakpoint)
+    this.isMobile = window.innerWidth <= 1081; 
+  }
+
+
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isMobile = window.innerWidth <= 1081;
+  }
+
+  @HostListener('wheel', ['$event'])
+  onWheel(event: WheelEvent) {
+    if (this.isMobile) return;
+    event.preventDefault();
+    if (!this.sections.length) return;
+
+    if (event.deltaY > 0) {
+      this.currentSection = Math.min(this.currentSection + 1, this.sections.length - 1);
+    } else {
+      this.currentSection = Math.max(this.currentSection - 1, 0);
+    }
+
+    this.sections[this.currentSection].scrollIntoView({ behavior: 'smooth' });
+  }
+
 }
+

@@ -5,18 +5,24 @@
 
 .about_wrapper {
     max-width: 1440px;
-    min-height: 100vh;
+    min-height: 100dvh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-
+//   min-height: 100dvh;  // full viewport
+//   max-width: 1440px;
+//   margin: 0 auto;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
 }
 
 .about_container {
     width: 95%;
-    // margin: 5rem;
+    margin: 2rem;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -30,7 +36,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     border-radius: 1rem;
-    padding-bottom: 10rem;
+    padding-bottom: 3rem;
 }
 
 .portrait_container {
