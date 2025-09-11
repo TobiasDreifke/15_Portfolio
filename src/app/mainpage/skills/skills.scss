@@ -2,21 +2,15 @@
 @use 'mixins' as *;
 
 .skills_wrapper {
-    //   max-width: 1440px;
-    // min-height: 100vh;
-    // max-width: 1440px;
-    // margin: 0 auto;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // transition: padding-top 0.25s ease;
-    min-height: 100dvh; // full viewport
+    min-height: 100dvh; 
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+        transition: all 0.5s ease;
+
 }
 
 .skills_container {
@@ -132,10 +126,11 @@
 // ------------------ REPSONSIVE ----------------
 
 
-@media (max-width: 990px) {
+@media (max-width: 1080px) {
 
     .skills_wrapper {
         padding-top: 5rem;
+        min-height: 0;
     }
 
     .skills_container {
