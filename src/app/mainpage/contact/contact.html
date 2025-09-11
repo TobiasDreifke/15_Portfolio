@@ -1,15 +1,15 @@
 <section class="contact_wrapper">
     <div class="contact_container">
         <div class="columns_wrapper_left">
-            <div class="headline_wrapper">
-                <h4 class="highlight">{{ 'contact.contactMe' | translate }}</h4>
-                <h2 class="highlight">{{ 'contact.letsWorkTogether' | translate }}</h2>
-                <h4 class="highlight">{{ 'contact.gotProblem' | translate }}</h4>
-                <p>{{ 'contact.encourageText' | translate }}</p>
-                <p>{{ 'contact.needFrontend' | translate }} <span class="highlight">{{ 'contact.letsTalk' | translate }}</span></p>
+            <div class="headline_wrapper" >
+                <h4 data-aos="fade-up" data-aos-anchor-placement="top_center" class="highlight">{{ 'contact.contactMe' | translate }}</h4>
+                <h2 data-aos="fade-right" class="highlight">{{ 'contact.letsWorkTogether' | translate }}</h2>
+                <h4 data-aos="fade-right" class="highlight">{{ 'contact.gotProblem' | translate }}</h4>
+                <p data-aos="fade-right">{{ 'contact.encourageText' | translate }}</p>
+                <p data-aos="fade-right"> {{ 'contact.needFrontend' | translate }} <span class="highlight">{{ 'contact.letsTalk' | translate }}</span></p>
             </div>
         </div>
-        <div class="columns_wrapper_right">
+        <div class="columns_wrapper_right" data-aos="fade-left">
             <form class="columns_container_right" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="divider"></div>
 

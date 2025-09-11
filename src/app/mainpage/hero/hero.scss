@@ -59,7 +59,7 @@
 @media (max-width: 800px) {
     .diagonal {
         position: absolute;
-        bottom: 12%;
+        bottom: 8%;
         left: 0;
         width: 110%;
         transform: rotate(-5deg);
@@ -81,5 +81,9 @@
         flex-direction: column;
         justify-content: space-between;
         gap: 1rem;
+    }
+
+    .diagonal {
+        bottom: 5%;
     }
 }

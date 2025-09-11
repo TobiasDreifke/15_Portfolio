@@ -216,7 +216,7 @@
         pointer-events: auto;
     }
 
-   
+
 
     .right {
         margin-right: 10%;
@@ -225,9 +225,17 @@
 
     .left {
         margin-left: 10%;
-        height: 10%;
+        height: 14%;
     }
 
     .rotate_jump_mark {
-    padding-left: 7rem;}
+        padding-left: 7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .left {
+        margin-left: 10%;
+        height: 14%;
+    }
 }

@@ -10,9 +10,9 @@ import {TranslatePipe, TranslateDirective, TranslateService} from '@ngx-translat
   styleUrl: './hero.scss'
 })
 export class Hero {
- constructor(private translate: TranslateService) {
-  this.translate.get('hero.h3').subscribe(value => {
-    console.log('hero.h3 =', value);
-  });
+//  constructor(private translate: TranslateService) {
+//   this.translate.get('hero.h3').subscribe(value => {
+//     console.log('hero.h3 =', value);
+//   });
 }
-}
+
