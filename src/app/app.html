@@ -1,7 +1,7 @@
 <div class="cursor-shadow" id="cursor-shadow"></div>
 <div class="center_content">
     <app-navbar></app-navbar>
-     <router-outlet></router-outlet>
+     <router-outlet (activate)="onActivate()"></router-outlet>
     <app-footer></app-footer>
    
 </div>

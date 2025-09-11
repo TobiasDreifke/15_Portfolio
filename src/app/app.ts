@@ -1,11 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Mainpage } from "./mainpage/mainpage";
 import { Footer } from "./shared-pages/footer/footer";
 import { Navbar } from './shared-pages/navbar/navbar';
-import { OnInit } from '@angular/core';
 import AOS from 'aos';
-import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 
 @Component({
@@ -36,5 +33,17 @@ export class App {
   ngOnInit() {
     AOS.init();
   }
+  onActivate() {
+    // window.scroll(0,0);
 
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    //or document.body.scrollTop = 0;
+    //or document.querySelector('body').scrollTo(0,0)
+  }
+  
 }

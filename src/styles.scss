@@ -26,6 +26,10 @@ body {
 
 }
 
+html {
+     overflow-x: hidden;
+}
+
 h1 {
     font-weight: 700;
     font-size: clamp(2rem, 8vw, 128px);
@@ -88,5 +92,5 @@ p {
 
 .jump_mark_wrapper {
     @include jump-mark($border-color: $color_secondary, $hover-color: $color_main);
-  
+
 }
