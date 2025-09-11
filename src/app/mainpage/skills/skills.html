@@ -24,8 +24,8 @@
             <div class="icon_container">
                 @for (skill of skillSet; track skill) {
                 <div>
-                    <img data-aos="flip-left" data-aos-anchor-placement="top-center" src="./assets/img/icons/{{skill.icon}}" (mouseenter)="triggerAnimation($event.target)">
-                    <p data-aos="flip-left" data-aos-anchor-placement="top-center">{{skill.language}}</p>
+                    <img data-aos="flip-left" src="./assets/img/icons/{{skill.icon}}" (mouseenter)="triggerAnimation($event.target)">
+                    <p data-aos="flip-left" >{{skill.language}}</p>
                 </div>
                 }
             </div>
