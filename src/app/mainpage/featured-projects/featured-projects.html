@@ -1,19 +1,19 @@
 <section class="featured_wrapper">
   <div class="featured_container">
     <div class="headline_wrapper">
-      <h4>{{ 'projects.headline' | translate }}</h4>
-      <h2>{{ 'projects.featured' | translate }}</h2>
-      <p>{{ 'projects.description' | translate }}</p>
+      <h4 data-aos="fade-up" data-aos-anchor-placement="top_center">{{ 'projects.headline' | translate }}</h4>
+      <h2 data-aos="fade-right">{{ 'projects.featured' | translate }}</h2>
+      <p data-aos="fade-right">{{ 'projects.description' | translate }}</p>
     </div>
 
-    <div class="featured_vertical_wrapper">
+    <div class="featured_vertical_wrapper" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
       <!-- Table -->
       <table>
         @for (project of projects; track $index;) {
         <tr (mouseenter)="hoveredIndex = $index" (mouseleave)="hoveredIndex = -1"
-            (click)="openProject(project, $index)">
-          <td data-aos="fade-right">{{ project.nameKey | translate }}</td>
-          <td data-aos="fade-left">
+          (click)="openProject(project, $index)">
+          <td data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">{{ project.nameKey | translate }}</td>
+          <td data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
             @for (tech of project.tech; track $index) {
             <span class="tech_name">
               {{ tech.tech }}
@@ -27,8 +27,7 @@
       <!-- Images -->
       <div class="featured_vertical_container">
         @for (project of projects; track $index) {
-        <div class="image_wrapper" [class.active]="hoveredIndex === $index"
-             [ngStyle]="{ top: getImageTop($index) }">
+        <div class="image_wrapper" [class.active]="hoveredIndex === $index" [ngStyle]="{ top: getImageTop($index) }">
           <div class="image_shadow"></div>
           <img [src]="project.image" alt="{{ project.nameKey | translate }}" />
         </div>
@@ -39,6 +38,7 @@
 </section>
 
 @if (selectedProject) {
-<app-project-01 [project]="selectedProject" [index]="selectedIndex!" (close)="closeProject()" (next)="goToNextProject()">
+<app-project-01 [project]="selectedProject" [index]="selectedIndex!" (close)="closeProject()"
+  (next)="goToNextProject()">
 </app-project-01>
 }

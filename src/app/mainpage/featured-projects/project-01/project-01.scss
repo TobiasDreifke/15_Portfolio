@@ -11,15 +11,17 @@
     justify-content: center;
     background-color: rgb(24, 26, 26, 0.8);
     backdrop-filter: blur(8px);
-
-
 }
 
 .project_container {
     width: 95%;
     min-height: 50%;
+    max-width: 1440px;
     z-index: 9999;
     background: linear-gradient(35deg, rgba(28, 28, 28, 100) 50%, rgba(34, 92, 81, 1) 100%);
+    background: linear-gradient(35deg,
+                rgba(28, 28, 28, 0.2) 10%,
+                rgba(34, 92, 81, 0.5) 100%);
     display: flex;
     justify-content: space-between;
     padding: 3rem;
@@ -158,6 +160,11 @@
     display: none;
     justify-content: end;
 }
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
 
 /* ---------- Responsive ---------- */
 

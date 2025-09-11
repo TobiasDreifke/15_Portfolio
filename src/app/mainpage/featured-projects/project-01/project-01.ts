@@ -18,10 +18,17 @@ export class Project01 {
 
   @Output() close = new EventEmitter<void>();
   @Output() next = new EventEmitter<void>();
+ngOnInit() {
+  document.body.classList.add('no-scroll');
+}
 
-  onClose() {
-    this.close.emit();
-  }
+ngOnDestroy() {
+  document.body.classList.remove('no-scroll');
+}
+
+onClose() {
+  this.close.emit(); 
+}
 
   onNext() {
     this.next.emit();
@@ -29,11 +36,5 @@ export class Project01 {
 
 
 
-  ngOnInit() {
-    document.body.classList.add('no-scroll');
-  }
 
-  ngOnDestroy() {
-    document.body.classList.remove('no-scroll');
-  }
 }

@@ -28,13 +28,13 @@ export class FeaturedProjects {
   openProject(project: Projects, index: number) {
     this.selectedProject = project;
     this.selectedIndex = index;
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
   }
 
   closeProject() {
     this.selectedProject = null;
     this.selectedIndex = null;
-    document.body.style.overflow = '';
+    // document.body.style.overflow = '';
   }
 
   goToNextProject() {
