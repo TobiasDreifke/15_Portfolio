@@ -1,6 +1,6 @@
 .hero_wrapper {
     max-width: 1440px;
-    min-height: 100dvh;
+    min-height: 100svh;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -58,7 +58,7 @@
 @media (max-width: 800px) {
 
     .hero_wrapper{
-        min-height: 100dvh;
+        min-height: 100svh;
     }
     .diagonal {
         position: absolute;

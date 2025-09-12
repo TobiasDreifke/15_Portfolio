@@ -1,19 +1,19 @@
 // .mainpage_wrapper {
-//   height: 100dvh;           // full viewport
+//   height: 100svh;           // full viewport
 //   overflow-y: auto;          // enable scrolling
 //   scroll-snap-type: y mandatory; // enable scroll snap
 // }
 
 // section {
 //   scroll-snap-align: start; // each section snaps to top
-//   min-height: 100dvh;       // full viewport height
+//   min-height: 100svh;       // full viewport height
 //   display: flex;
 //   justify-content: center;
 //   align-items: center;
 // }
 
 // .mainpage_wrapper {
-//     height: 100dvh;
+//     height: 100svh;
 //     overflow-y: auto;
 //     scroll-snap-type: y mandatory;
 // }
@@ -25,7 +25,7 @@
 // app-testimonials,
 // app-contact {
 //     scroll-snap-align: start;
-//     min-height: 100dvh;
+//     min-height: 100svh;
 //     display: flex;
 //     justify-content: center;
 //     align-items: center;
@@ -43,7 +43,7 @@
 // app-testimonials,
 // app-contact {
 //   scroll-snap-align: start;
-//   min-height: 100dvh; // full viewport height
+//   min-height: 100svh; // full viewport height
 // //   display: flex;
 // //   justify-content: center;
 // //   align-items: center;
