@@ -18,7 +18,7 @@
     "remote": "Available for remote work"
   },
   "about_me": {
-    "headline": "who I am",
+    "headline": "Who I am",
     "title": "About me",
     "intro": "Hey there, I'm Lukas! Write some IT-related information about yourself. Why are you passionate about coding? What inspires you to improve your programming skills?",
     "question1": "Where are you based? Are you open to remote work or relocation?",
@@ -26,7 +26,7 @@
     "question3": "Describe your problem-solving approach. Do you learn from challenges and search for efficient solutions? Keywords: analytical thinking, creativity, persistence, collaboration."
   },
   "skills": {
-    "technologies": "technologies",
+    "technologies": "Technologies",
     "skillset": "Skillset",
     "intro": "A short introduction of your skills. Highlight your experience with different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with rapid changes in web development.",
     "anotherSkill": "You need another skill?",
@@ -34,7 +34,7 @@
     "letsTalk": "let's talk"
   },
   "contact": {
-    "contactMe": "contact me",
+    "contactMe": "Contact me",
     "letsWorkTogether": "Let's work together",
     "gotProblem": "Got a problem to solve?",
     "encourageText": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
@@ -71,7 +71,7 @@
     }
   },
   "projects": {
-    "headline": "portfolio",
+    "headline": "Portfolio",
     "featured": "Featured Projects",
     "description": "Explore a selection of my work here - Interact with projects to see my skills in action.",
     "about": "what is this project about?",

@@ -7,7 +7,7 @@
         "contact": "schreib mir"
     },
     "navbar": {
-        "about": "über mich",
+        "about": "Über mich",
         "skills": "Fähigkeiten",
         "projects": "Projekte"
     },
@@ -18,7 +18,7 @@
         "remote": "Verfügbar für Remote-Arbeit"
     },
     "about_me": {
-        "headline": "wer ich bin",
+        "headline": "Wer ich bin",
         "title": "Über mich",
         "intro": "Hallo, ich bin Lukas! Schreibe hier ein paar IT-bezogene Infos über dich. Warum bist du leidenschaftlich am Programmieren interessiert? Was motiviert dich, deine Programmierfähigkeiten zu verbessern?",
         "question1": "Wo bist du ansässig? Bist du offen für Remote-Arbeit oder einen Umzug?",
@@ -26,7 +26,7 @@
         "question3": "Beschreibe deinen Ansatz zur Problemlösung. Lernst du aus Herausforderungen und suchst nach effizienten Lösungen? Schlagworte: analytisches Denken, Kreativität, Ausdauer, Zusammenarbeit."
     },
     "skills": {
-        "technologies": "technologien",
+        "technologies": "Technologien",
         "skillset": "Fähigkeiten",
         "intro": "Eine kurze Einführung in deine Fähigkeiten. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit, neue Technologien zu lernen und dich anzupassen. Zeige, wie wichtig es für dich ist, mit den schnellen Veränderungen in der Webentwicklung Schritt zu halten.",
         "anotherSkill": "Du brauchst eine weitere Fähigkeit?",
@@ -34,7 +34,7 @@
         "letsTalk": "Lass uns sprechen"
     },
     "contact": {
-        "contactMe": "kontaktiere mich",
+        "contactMe": "Kontaktiere mich",
         "letsWorkTogether": "Lass uns zusammenarbeiten",
         "gotProblem": "Hast du ein Problem zu lösen?",
         "encourageText": "Ermutige die Leute, dich zu kontaktieren, und beschreibe, welche Rolle dich interessiert. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte bringst.",
@@ -56,7 +56,7 @@
         "sayHello": "Sag Hallo"
     },
     "testimonials": {
-        "headline": "was meine Kollegen über mich sagen",
+        "headline": "Was meine Kollegen über mich sagen",
         "first": {
             "text": "Lukas ist ein großartiger Kollaborateur. Seine Problemlösungsfähigkeiten sind erstklassig.",
             "author": "H. Janisch – Team Partner"
@@ -71,7 +71,7 @@
         }
     },
     "projects": {
-        "headline": "portfolio",
+        "headline": "Portfolio",
         "featured": "Ausgewählte Projekte",
         "description": "Entdecke hier eine Auswahl meiner Arbeiten – Interagiere mit Projekten, um meine Fähigkeiten live zu sehen.",
         "about": "Worum geht es in diesem Projekt?",
