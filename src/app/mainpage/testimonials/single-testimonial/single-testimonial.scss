@@ -12,7 +12,7 @@
     font-weight: 700;
     line-height: 1;
     z-index: 1;
-        transition: all 0.25s ease;
+    transition: all 0.25s ease;
 
 }
 
@@ -23,7 +23,7 @@
     position: relative;
     z-index: 2;
     text-align: left;
-        transition: all 0.25s ease;
+    transition: all 0.25s ease;
 
 }
 
@@ -31,25 +31,43 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 0.5rem;
     margin-top: 2rem;
     font-weight: 600;
-        transition: all 0.25s ease;
+    transition: all 0.25s ease;
 
 
     .line {
         flex-grow: 1;
         height: 1px;
         background-color: #3DCFB6;
-        margin-right: 1rem;
-            transition: all 0.25s ease;
+        transition: all 0.25s ease;
 
     }
 
-    span {
-        white-space: nowrap;
-            transition: all 0.25s ease;
+    .author_and_icons_wrapper {
+        display: flex;
+        justify-content: end;
+        gap: 0.5rem;
 
+        p {
+            white-space: nowrap;
+            transition: all 0.25s ease;
+        }
+
+        .author_icons_wrapper {
+            display: flex;
+            gap: 0.5rem;
+
+            img {
+                width: 25px;
+                aspect-ratio: 1;
+                cursor: pointer;
+            }
+        }
     }
+
+
 }
 
 
@@ -77,8 +95,9 @@
 
     .author {
         display: block;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
+        gap: 1rem;
         margin-top: 2rem;
         font-weight: 600;
 
@@ -89,9 +108,52 @@
             margin-right: 0;
         }
 
-        span {
-            white-space: wrap;
-            font-size: 16px;
+
+        .author_and_icons_wrapper {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+
+            p {
+                white-space: wrap;
+                font-size: 16px;
+            }
+
+            .author_icons_wrapper {
+                img {
+                    width: 25px;
+                    aspect-ratio: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .author {
+
+        .author_and_icons_wrapper {
+            margin-top: 1rem;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            flex-direction: column;
+
+            p {
+                white-space: wrap;
+                font-size: 16px;
+            }
+
+            .author_icons_wrapper {
+
+                img {
+                    width: 25px;
+                    aspect-ratio: 1;
+                }
+            }
         }
     }
 }

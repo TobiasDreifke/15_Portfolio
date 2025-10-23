@@ -2,5 +2,12 @@
 <p class="testimonial">{{ single_testimonial.textKey | translate }}</p>
 <div class="author">
   <div class="line"></div>
-  <span>{{ single_testimonial.authorKey | translate }}</span>
+  <div class="author_and_icons_wrapper">
+    <p>{{ single_testimonial.authorKey | translate }}</p>
+    <div class="author_icons_wrapper"><a href="{{ single_testimonial.linkedinKey }}" target="_blank"><img
+          src="assets/img/icons/hero/Property 1=Linkedin.png"></a>
+      <a href="{{ single_testimonial.githubKey }}" target="_blank"><img
+          src="assets/img/icons/hero/Property 1=GitHub.png"></a>
+    </div>
+  </div>
 </div>
