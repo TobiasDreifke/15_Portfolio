@@ -3,6 +3,8 @@ export interface Projects {
   descriptionKey: string;
   tech: TechItem[];
   image: string;
+  github: string;
+  liveTest: string;
 }
 
 export interface TechItem {
