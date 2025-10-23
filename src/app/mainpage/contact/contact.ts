@@ -8,7 +8,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule, RouterModule, CommonModule,TranslatePipe],
+  imports: [FormsModule, RouterModule, CommonModule, TranslatePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
   standalone: true,
@@ -16,6 +16,8 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
 export class Contact {
 
   private http = inject(HttpClient);
+  messageSent = false;
+  mailTest = false;
 
   // form model
   contactData = {
@@ -25,27 +27,29 @@ export class Contact {
     agree: false,
   };
 
- 
-  mailTest = false; 
+  resetContactData() {
+    this.contactData = {
+      name: '',
+      email: '',
+      message: '',
+      agree: false,
+    };
+  }
+
 
   post = {
     endPoint: 'https://tobiasdreifke.com/sendMail.php',
-    body: (payload: any) => payload, 
+    body: (payload: any) => payload,
     options: {
       headers: { 'Content-Type': 'application/json' },
       responseType: 'text' as const,
     },
   };
 
+
   onSubmit(ngForm: NgForm) {
     if (!ngForm.valid || !this.contactData.agree) {
       console.warn('Form invalid or user did not agree');
-      return;
-    }
-
-    if (this.mailTest) {
-      console.info('Testing mode – no mail sent', this.contactData);
-      ngForm.resetForm();
       return;
     }
 
@@ -54,7 +58,10 @@ export class Contact {
       .subscribe({
         next: (response) => {
           console.info('Mail sent successfully:', response);
+          this.messageSent = true;
           ngForm.resetForm();
+          this.resetContactData();
+          setTimeout(() => this.messageSent = false, 1500);
         },
         error: (error) => {
           console.error('Error sending mail:', error);
