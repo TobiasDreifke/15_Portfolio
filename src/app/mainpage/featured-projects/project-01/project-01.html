@@ -1,5 +1,5 @@
-<section class="project_wrapper">
-  <div class="project_container">
+<section class="project_wrapper" #wrapper>
+  <div class="project_container" #wrapper>
     <div class="next_button_mobile_wrapper">
       <p class="next_project_button_mobile" (click)="onNext()">
         {{ 'projects.nextProject' | translate }} <span class="arrow">&nbsp; &rarr;</span>
@@ -43,3 +43,13 @@
     </div>
   </div>
 </section>
+
+<!-- <div class="modal-overlay" (click)="onClose()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>Modal Title</h2>
+    <p>
+      This is the content of the modal. It can include text, images, forms, or any Angular component.
+    </p>
+    <button (click)="onClose()">Close</button>
+  </div>
+</div> -->

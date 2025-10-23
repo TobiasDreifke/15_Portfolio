@@ -1,10 +1,12 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { Hero } from "./hero/hero";
 import { AboutMe } from "./about-me/about-me";
 import { FeaturedProjects } from "./featured-projects/featured-projects";
 import { Testimonials } from "./testimonials/testimonials";
 import { Contact } from "./contact/contact";
 import { Skills } from './skills/skills';
+import { ModalService } from '../services/modal-service';
+
 
 @Component({
   selector: 'app-mainpage',
@@ -13,37 +15,25 @@ import { Skills } from './skills/skills';
   styleUrl: './mainpage.scss'
 })
 export class Mainpage {
-
-
+  private modalService = inject(ModalService);
   private currentSection = 0;
   private sections: HTMLElement[] = [];
-
-
-    private isMobile = false;
+  private isMobile = false;
 
   ngAfterViewInit() {
-    // Select all sections
     this.sections = Array.from(
       document.querySelectorAll('app-hero, app-about-me, app-skills, app-featured-projects, app-testimonials, app-contact, app-footer')
     );
-
-    // Determine if mobile (you can adjust breakpoint)
-    this.isMobile = window.innerWidth <= 1081; 
-  }
-
-
-
-  @HostListener('window:resize')
-  onResize() {
     this.isMobile = window.innerWidth <= 1081;
   }
 
-  @HostListener('wheel', ['$event'])
+  @HostListener('window:wheel', ['$event'])
   onWheel(event: WheelEvent) {
     if (this.isMobile) return;
-    event.preventDefault();
+    if (this.modalService.isModalOpen()) return; // skip scrolling when modal open
     if (!this.sections.length) return;
 
+    event.preventDefault();
     if (event.deltaY > 0) {
       this.currentSection = Math.min(this.currentSection + 1, this.sections.length - 1);
     } else {

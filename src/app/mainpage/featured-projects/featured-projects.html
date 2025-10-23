@@ -12,7 +12,8 @@
         @for (project of projects; track $index;) {
         <tr (mouseenter)="hoveredIndex = $index" (mouseleave)="hoveredIndex = -1"
           (click)="openProject(project, $index)">
-          <td data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">{{ project.nameKey | translate }}</td>
+          <td data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">{{
+            project.nameKey | translate }}</td>
           <td data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
             @for (tech of project.tech; track $index) {
             <span class="tech_name">
@@ -35,10 +36,10 @@
       </div>
     </div>
   </div>
-</section>
+  @if (selectedProject) {
+  <app-project-01 [project]="selectedProject" [index]="selectedIndex!" (close)="closeProject()"
+    (next)="goToNextProject()" (click)="$event.stopPropagation()">
+  </app-project-01>
+  }
 
-@if (selectedProject) {
-<app-project-01 [project]="selectedProject" [index]="selectedIndex!" (close)="closeProject()"
-  (next)="goToNextProject()">
-</app-project-01>
-}
+</section>

@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Project01 } from './project-01/project-01';
 import { Projects } from '../../interfaces/projects.interface';
 import { PROJECTS } from '../../data/projects.data';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
+import { ModalService } from '../../services/modal-service';
 
 @Component({
   selector: 'app-featured-projects',
@@ -12,8 +13,9 @@ import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
   styleUrls: ['./featured-projects.scss']
 })
 export class FeaturedProjects {
+  private modalService = inject(ModalService);
+  
   hoveredIndex: number = 0;
-
   projects: Projects[] = PROJECTS;
 
   getImageTop(index: number): string {
@@ -25,16 +27,17 @@ export class FeaturedProjects {
   selectedProject: Projects | null = null;
   selectedIndex: number | null = null;
 
+
   openProject(project: Projects, index: number) {
     this.selectedProject = project;
     this.selectedIndex = index;
-    // document.body.style.overflow = 'hidden';
+    this.modalService.openModal();
   }
 
   closeProject() {
     this.selectedProject = null;
     this.selectedIndex = null;
-    // document.body.style.overflow = '';
+    this.modalService.closeModal();
   }
 
   goToNextProject() {

@@ -1,3 +1,22 @@
+:host {
+    .no-scroll {
+        overflow: hidden !important;
+        height: 100vh;
+    }
+}
+
+body {
+    .no-scroll {
+        overflow: hidden !important;
+        height: 100vh;
+    }
+}
+
+.no-scroll {
+    overflow: hidden !important;
+    height: 100vh;
+}
+
 // .mainpage_wrapper {
 //   height: 100svh;           // full viewport
 //   overflow-y: auto;          // enable scrolling
