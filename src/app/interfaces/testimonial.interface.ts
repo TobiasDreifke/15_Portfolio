@@ -3,4 +3,6 @@ export interface Testimonial {
   author?: string;
   textKey?: string;
   authorKey?: string;
+  githubKey?: string;
+  linkedinKey?: string;
 } 
