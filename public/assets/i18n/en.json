@@ -58,16 +58,20 @@
   "testimonials": {
     "headline": "what my colleagues say about me",
     "first": {
-      "text": "Lukas is an amazing collaborator. His problem-solving skills are top-notch.",
-      "author": "H. Janisch – Team Partner"
+      "text": "Tobias is a reliable and committed member of the project team. He communicates clearly and contributes to efficient coordination. His structured approach and consistent use of project management principles ensure stable workflows. His clean, readable code and technical accuracy play a key role in the project’s success.",
+      "author": "Demis Moysidis – Join"
     },
     "second": {
-      "text": "Working with Lukas is a pleasure. He delivers quality work consistently.",
-      "author": "M. Schmidt – Project Lead"
+      "text": "Tobias demonstrates strong competence and works in a structured and precise way. He solves complex problems through analytical thinking and remains calm when facing challenges. His experience and teamwork make him a key contributor and a respected colleague.",
+      "author": "Amer Alkhalidy – Join"
     },
     "third": {
-      "text": "Lukas always goes the extra mile to ensure the team succeeds.",
-      "author": "S. Keller – Colleague"
+      "text": "Tobias works with great commitment and takes on a large share of the project tasks. His reliability and responsibility ensure the project’s success. Without his consistent effort, the result would not have reached the same level. I fully recommend him.",
+      "author": "Madina Askar Zada – Kochwelt"
+    },
+    "fourth": {
+      "text": "Tobias shows ambition and finds solutions for every challenge. He supports team members reliably and shares his knowledge openly. His help strengthens the team’s collaboration.",
+      "author": "Julian Kohn – Join"
     }
   },
   "projects": {
@@ -82,12 +86,16 @@
       "name": "Join",
       "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
     },
-    "elpollo": {
-      "name": "El Pollo Loco",
+    "knighthood": {
+      "name": "Knighthood",
       "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
     },
     "dabubble": {
       "name": "DA Bubble",
+      "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    },
+    "pokedex": {
+      "name": "Pokedex",
       "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
     }
   },

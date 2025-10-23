@@ -58,16 +58,20 @@
     "testimonials": {
         "headline": "Was meine Kollegen über mich sagen",
         "first": {
-            "text": "Lukas ist ein großartiger Kollaborateur. Seine Problemlösungsfähigkeiten sind erstklassig.",
-            "author": "H. Janisch – Team Partner"
+            "text": "Tobias ist ein zuverlässiges und engagiertes Mitglied des Projektteams. Er kommuniziert klar und sorgt für effiziente Abstimmungen. Seine strukturierte Arbeitsweise und konsequente Umsetzung von Projektmanagement-Prinzipien sichern stabile Abläufe. Sein sauberer, gut lesbarer Code und seine technische Sorgfalt sind ein zentraler Beitrag zum Erfolg des Projekts.",
+            "author": "Demis Moysidis – Join"
         },
         "second": {
-            "text": "Die Zusammenarbeit mit Lukas macht Freude. Er liefert konsequent hochwertige Arbeit.",
-            "author": "M. Schmidt – Projektleiter"
+            "text": "Tobias zeigt hohe Kompetenz und arbeitet strukturiert und präzise. Er löst komplexe Probleme mit analytischem Denken und bewahrt dabei Ruhe und Gelassenheit. Durch seine Erfahrung und seine zuverlässige Teamarbeit trägt er wesentlich zum Projekterfolg bei und ist ein respektierter Kollege.",
+            "author": "Amer Alkhalidy – Join"
         },
         "third": {
-            "text": "Lukas geht immer die Extra-Meile, um den Erfolg des Teams zu sichern.",
-            "author": "S. Keller – Kollege"
+            "text": "Tobias arbeitet engagiert und übernimmt einen großen Teil der Projektaufgaben. Er zeigt vollen Einsatz und stellt mit seiner Zuverlässigkeit und Verantwortung sicher, dass das Projekt erfolgreich verläuft. Ohne seine konsequente Arbeit wäre das Ergebnis deutlich schwächer. Ich empfehle ihn uneingeschränkt weiter.",
+            "author": "Madina Askar Zada – Kochwelt"
+        },
+        "fourth": {
+            "text": "Tobias zeigt Ehrgeiz und sucht für jedes Problem eine Lösung. Er hilft Teammitgliedern zuverlässig und teilt sein Wissen offen. Seine Unterstützung stärkt das Team spürbar.",
+            "author": "Julian Kohn – Join"
         }
     },
     "projects": {
@@ -76,19 +80,23 @@
         "description": "Entdecke hier eine Auswahl meiner Arbeiten – Interagiere mit Projekten, um meine Fähigkeiten live zu sehen.",
         "about": "Worum geht es in diesem Projekt?",
         "nextProject": "Nächstes Projekt",
-        "github": "Github",
-        "liveTest": "Live-Test",
+        "github": "github",
+        "liveTest": "live test",
         "join": {
             "name": "Join",
             "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop, weise Benutzer und Kategorien zu."
         },
-        "elpollo": {
-            "name": "El Pollo Loco",
+        "knighthood": {
+            "name": "Knighthood",
             "description": "Jump, Run und Throw-Game basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
         },
         "dabubble": {
             "name": "DA Bubble",
             "description": "Diese App ist ein Slack-Clone. Sie revolutioniert die Teamkommunikation mit intuitiver Oberfläche, Echtzeitnachrichten und robuster Kanalorganisation."
+        },
+        "pokedex": {
+            "name": "Pokedex",
+            "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
         }
     },
     "footer": {
