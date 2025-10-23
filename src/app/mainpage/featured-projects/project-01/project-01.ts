@@ -10,31 +10,25 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
   styleUrls: ['./project-01.scss']
 })
 export class Project01 {
-
   @Input()
   project!: Projects;
-
   @Input() index!: number;
-
   @Output() close = new EventEmitter<void>();
   @Output() next = new EventEmitter<void>();
-ngOnInit() {
-  document.body.classList.add('no-scroll');
-}
 
-ngOnDestroy() {
-  document.body.classList.remove('no-scroll');
-}
+  ngOnInit() {
+    document.body.classList.add('no-scroll');
+  }
 
-onClose() {
-  this.close.emit(); 
-}
+  ngOnDestroy() {
+    document.body.classList.remove('no-scroll');
+  }
+
+  onClose() {
+    this.close.emit();
+  }
 
   onNext() {
     this.next.emit();
   }
-
-
-
-
 }
