@@ -9,5 +9,8 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './footer.scss'
 })
 export class Footer {
-
+scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 }
