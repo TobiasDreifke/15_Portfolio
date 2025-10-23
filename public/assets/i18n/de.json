@@ -53,7 +53,11 @@
         "privacyText2": "Datenschutzerklärung",
         "privacyText3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
         "privacyError": "Du musst der Datenschutzerklärung zustimmen",
-        "sayHello": "Sag Hallo"
+        "messageError": "Bitte gib eine Nachricht mit min. 4 Buchstaben ein",
+        "emailError": "Bitte gib eine gültige E-Mail ein",
+        "nameError": "Bitte gib deinen Namen ein",
+        "sayHello": "Sag Hallo",
+        "messageSent": "deine Nachricht wurde erfolgreich verschickt"
     },
     "testimonials": {
         "headline": "Was meine Kollegen über mich sagen",
