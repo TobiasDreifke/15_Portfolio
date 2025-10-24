@@ -33,7 +33,7 @@
                     <input [(ngModel)]="contactData.email" name="email" id="email" class="input_field_text"
                         [ngClass]="{ 'input_error': contactForm.submitted && !email.valid }" type="email"
                         placeholder="{{ contactForm.submitted && !email.valid ? ('contact.placeholderEmailError' | translate) : ('contact.placeholderEmail' | translate) }}"
-                        required #email="ngModel" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
+                        required #email="ngModel" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
 
                     <div class="divider"></div>
 
