@@ -2,6 +2,11 @@
 @use 'fonts' as *;
 @use 'mixins' as *;
 
+html.no-scroll,
+html.no-scroll body {
+    overflow: hidden;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,8 +15,8 @@
     font-family: 'Karla', sans-serif;
     font-size: 20px;
 
-    scrollbar-width: thin;
-    scrollbar-color: #FD5B4F #dddddd00;
+    scrollbar-width: none;
+    // scrollbar-color: #FD5B4F #dddddd00;
 
     scroll-behavior: smooth;
     text-align: left;
@@ -27,6 +32,7 @@ body {
 }
 
 html {
+    background-color: rgb(28, 28, 28, );
     overflow-x: hidden;
 }
 
@@ -96,7 +102,20 @@ p {
 }
 
 /* hide page scrollbar */
-html { scrollbar-width: none; } /* Firefox */
-body { -ms-overflow-style: none; } /* IE and Edge */
-body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Chrome */
+html {
+    scrollbar-width: none;
+}
+
+/* Firefox */
+body {
+    -ms-overflow-style: none;
+}
+
+/* IE and Edge */
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Chrome */
 /* end hide page scrollbar */

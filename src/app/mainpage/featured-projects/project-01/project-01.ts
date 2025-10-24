@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Projects } from '../../../interfaces/projects.interface';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ModalService } from '../../../services/modal-service';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-project-01',
@@ -21,21 +22,23 @@ export class Project01 implements OnDestroy {
 
   @ViewChild('wrapper') wrapper!: ElementRef<HTMLDivElement>;
 
-  ngAfterViewInit() {
-    this.wrapper.nativeElement.scrollTop = 0;
-  }
-
   ngOnDestroy() {
-    this.modalService.closeModal();
+    // this.modalService.closeModal();
   }
 
   onClose() {
     this.close.emit();
-    this.modalService.closeModal();
+    // this.modalService.closeModal();
   }
 
   onNext() {
     this.next.emit();
+    if (this.wrapper?.nativeElement) {
+      this.wrapper.nativeElement.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   }
 }
 

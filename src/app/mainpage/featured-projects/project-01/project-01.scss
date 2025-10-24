@@ -1,38 +1,12 @@
 @use 'variables' as *;
 
-.no-scroll {
-    overflow: hidden !important;
-}
+// .no-scroll {
+//     overflow: hidden !important;
+// }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    overflow: auto; // optional, allows scrolling inside modal if content is tall
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 500px;
-    width: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    max-height: 90vh; // optional: ensures modal never exceeds screen height
-    overflow-y: auto; // scroll inside modal if content too tall
-}
-
-.project_wrapper * {
-    pointer-events: auto;
-}
+// .project_wrapper * {
+//     pointer-events: auto;
+// }
 
 .project_wrapper {
     position: fixed;
@@ -43,15 +17,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    // background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(8px);
-    overflow: hidden; // Body scroll verhindern
+    // overflow: hidden; // Body scroll verhindern
 }
 
 .project_container {
     width: 95%;
     min-height: 50%;
     max-width: 1440px;
+    max-height: 95svh;
     z-index: 9999;
     background: linear-gradient(35deg, rgba(28, 28, 28, 100) 50%, rgba(34, 92, 81, 1) 100%);
     background: linear-gradient(35deg,
@@ -60,10 +35,10 @@
 
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 
     padding: 3rem;
     overflow-y: auto;
-
     border-radius: 1rem;
     border-color: $color_main;
     border-style: solid;
@@ -72,24 +47,7 @@
     border-bottom-width: 3px;
     border-right-width: 1px;
     border-top-width: 1px;
-
-    padding: 1.5rem;
-
-    width: 95%;
-    max-width: 1440px;
-    max-height: 95svh;
-    background: linear-gradient(35deg, rgba(28, 28, 28, 0.2) 10%, rgba(34, 92, 81, 0.5) 100%);
-    display: flex;
-    flex-direction: row; // default desktop
-    justify-content: space-between;
-    padding: 2rem;
-    border-radius: 1rem;
-    overflow-y: auto; // Scroll nur in der Box
 }
-
-
-
-
 
 .jump_marks {
     display: flex;
@@ -212,37 +170,38 @@
     justify-content: end;
 }
 
-.no-scroll {
-    overflow: hidden !important;
-}
+// .no-scroll {
+//     overflow: hidden !important;
+// }
 
 
 /* ---------- Responsive ---------- */
 
 @media (max-width: 880px) {
 
-    .project_wrapper {
-        position: fixed;
-        // inset: 0;
-        width: 100dvw;
-        height: 100svh;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(24, 26, 26, 0.8);
-        backdrop-filter: blur(8px);
-        border-radius: 1rem;
-    }
+    .project_wrapper {}
 
     .project_container {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 1.5rem;
         overflow-y: auto;
     }
 
-    .no-scroll {
-        overflow: hidden !important;
+    .column_wrapper_right {
+        order: 1;
+    }
+
+    .column_wrapper_left {
+        order: 2;
+    }
+
+
+    .next_button_mobile_wrapper {
+        order: 3;
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        justify-content: end;
     }
 
     .column_wrapper_left {
