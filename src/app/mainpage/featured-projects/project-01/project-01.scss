@@ -50,15 +50,6 @@
     border-bottom-width: 3px;
     border-right-width: 1px;
     border-top-width: 1px;
-
-    // padding-right: 5px; // space for scrollbar
-    // scrollbar-gutter: stable both-edges;
-
-
-
-
-
-
 }
 
 .project_inner {
@@ -231,7 +222,7 @@
 
     .project_container {
         flex-direction: column;
-        padding: 0.2rem;
+        padding: 0.4rem;
         overflow-y: auto;
     }
 
