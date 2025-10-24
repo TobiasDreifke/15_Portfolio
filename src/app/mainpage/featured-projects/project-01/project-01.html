@@ -1,45 +1,48 @@
 <section class="project_wrapper">
   <div class="project_container" #wrapper>
-    <div class="next_button_mobile_wrapper">
-      <p class="next_project_button_mobile" (click)="onNext()">
-        {{ 'projects.nextProject' | translate }} <span class="arrow">&nbsp; &rarr;</span>
-      </p>
-    </div>
-
-    <div class="column_wrapper_left">
-      <h4>{{ index + 1 }}</h4>
-      <h2>{{ project.nameKey | translate }}</h2>
-      <h3>{{ 'projects.about' | translate }}</h3>
-      <p>{{ project.descriptionKey | translate }}</p>
-
-      <div class="icon_wrapper">
-        @for (tech of project.tech; track $index) {
-        <div class="icon_container">
-          <img [src]="tech.image" [alt]="tech.tech" />
-          <p>{{ tech.tech }}</p>
-        </div>
-        }
+    <div class="project_inner">
+      <div class="next_button_mobile_wrapper">
+        <p class="next_project_button_mobile" (click)="onNext()">
+          {{ 'projects.nextProject' | translate }} <span class="arrow">&nbsp; &rarr;</span>
+        </p>
       </div>
 
-      <div class="jump_marks">
-        <div class="jump_mark_wrapper">
-          <a href="{{project.github}}" target="_blank">{{ 'projects.github' | translate }} <span class="arrow_diagonal">&#8599;</span></a>
-        </div>
-        <div class="jump_mark_wrapper">
-          <a href="{{project.liveTest}}" target="_blank">{{ 'projects.liveTest' | translate }} <span
-              class="arrow_diagonal">&#8599;</span></a>
-        </div>
-      </div>
-    </div>
+      <div class="column_wrapper_left">
+        <h4>{{ index + 1 }}</h4>
+        <h2>{{ project.nameKey | translate }}</h2>
+        <h3>{{ 'projects.about' | translate }}</h3>
+        <p>{{ project.descriptionKey | translate }}</p>
 
-    <div class="column_wrapper_right">
-      <p class="close_btn" (click)="onClose()">X</p>
-      <div class="image_wrapper">
-        <img [src]="project.image" alt="{{ project.nameKey | translate }}" />
+        <div class="icon_wrapper">
+          @for (tech of project.tech; track $index) {
+          <div class="icon_container">
+            <img [src]="tech.image" [alt]="tech.tech" />
+            <p>{{ tech.tech }}</p>
+          </div>
+          }
+        </div>
+
+        <div class="jump_marks">
+          <div class="jump_mark_wrapper">
+            <a href="{{project.github}}" target="_blank">{{ 'projects.github' | translate }} <span
+                class="arrow_diagonal">&#8599;</span></a>
+          </div>
+          <div class="jump_mark_wrapper">
+            <a href="{{project.liveTest}}" target="_blank">{{ 'projects.liveTest' | translate }} <span
+                class="arrow_diagonal">&#8599;</span></a>
+          </div>
+        </div>
       </div>
-      <p class="next_project_button_desktop" (click)="onNext()">
-        {{ 'projects.nextProject' | translate }} <span class="arrow">&nbsp; &rarr;</span>
-      </p>
+
+      <div class="column_wrapper_right">
+        <p class="close_btn" (click)="onClose()">X</p>
+        <div class="image_wrapper">
+          <img [src]="project.image" alt="{{ project.nameKey | translate }}" />
+        </div>
+        <p class="next_project_button_desktop" (click)="onNext()">
+          {{ 'projects.nextProject' | translate }} <span class="arrow">&nbsp; &rarr;</span>
+        </p>
+      </div>
     </div>
   </div>
 </section>

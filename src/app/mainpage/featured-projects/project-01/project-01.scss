@@ -20,6 +20,7 @@
     // background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(8px);
     // overflow: hidden; // Body scroll verhindern
+
 }
 
 .project_container {
@@ -34,11 +35,13 @@
             rgba(34, 92, 81, 0.5) 100%);
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
 
-    padding: 3rem;
+    // padding: 3rem;
     overflow-y: auto;
+
     border-radius: 1rem;
     border-color: $color_main;
     border-style: solid;
@@ -47,6 +50,51 @@
     border-bottom-width: 3px;
     border-right-width: 1px;
     border-top-width: 1px;
+
+    // padding-right: 5px; // space for scrollbar
+    // scrollbar-gutter: stable both-edges;
+
+
+
+
+
+
+}
+
+.project_inner {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    padding: 1rem;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: $border_wrapper_color transparent;
+
+    /* WebKit */
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $border_wrapper_color;
+        border-radius: 4px;
+        border: none;
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
 }
 
 .jump_marks {
@@ -183,8 +231,13 @@
 
     .project_container {
         flex-direction: column;
-        padding: 1.5rem;
+        padding: 0.2rem;
         overflow-y: auto;
+    }
+
+    .project_inner {
+        flex-direction: column;
+        padding: 0.5rem;
     }
 
     .column_wrapper_right {
@@ -242,8 +295,14 @@
 }
 
 @media (max-width: 480px) {
+
+    .project_inner {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
     .project_container {
-        padding: 1rem;
+        padding: 0rem;
     }
 
     .column_wrapper_left>h4 {
