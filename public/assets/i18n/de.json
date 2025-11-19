@@ -20,24 +20,24 @@
     "about_me": {
         "headline": "Wer ich bin",
         "title": "Über mich",
-        "intro": "Hallo, ich bin Lukas! Schreibe hier ein paar IT-bezogene Infos über dich. Warum bist du leidenschaftlich am Programmieren interessiert? Was motiviert dich, deine Programmierfähigkeiten zu verbessern?",
-        "question1": "Wo bist du ansässig? Bist du offen für Remote-Arbeit oder einen Umzug?",
-        "question2": "Zeige, dass du aufgeschlossen bist. Bist du begeistert, neue Technologien zu lernen?",
-        "question3": "Beschreibe deinen Ansatz zur Problemlösung. Lernst du aus Herausforderungen und suchst nach effizienten Lösungen? Schlagworte: analytisches Denken, Kreativität, Ausdauer, Zusammenarbeit."
+        "intro": "Hi, ich bin Tobias. Ich komme aus dem Produkt- und 3D-Design und habe dort gelernt, komplexe Ideen greifbar zu machen. Jetzt mache ich das Gleiche im Code: Ich baue zeitgemäße, responsive Interfaces und durchdachte Backends mit Python. Wenn Design und Logik zusammenfinden, fühle ich mich zuhause.",
+        "question1": "Remote, Hybrid oder Onsite - mir ist wichtig, dass Zusammenarbeit funktioniert. Der Ort ist zweitrangig.",
+        "question2": "Ich lerne schnell, probiere viel aus und integriere neue Tools oder Frameworks direkt in kleine Projekte, um praktisch zu verstehen, wie sie funktionieren.",
+        "question3": "Ich genieße Teamarbeit, weil verschiedene Perspektiven oft zu eleganteren Lösungen führen."
     },
     "skills": {
         "technologies": "Technologien",
         "skillset": "Fähigkeiten",
-        "intro": "Eine kurze Einführung in deine Fähigkeiten. Hebe deine Erfahrung mit verschiedenen Frontend-Technologien hervor und betone deine Offenheit, neue Technologien zu lernen und dich anzupassen. Zeige, wie wichtig es für dich ist, mit den schnellen Veränderungen in der Webentwicklung Schritt zu halten.",
+        "intro": "Ich arbeite sowohl im Frontend als auch im Backend: Ich entwickle responsive Interfaces mit HTML, CSS und JavaScript und baue strukturierte, zuverlässige Logik mit Python. Mein Hintergrund im Produkt- und 3D-Design gibt mir ein ausgeprägtes Gespür für Usability, klare Strukturen und Details. Ich bleibe neugierig, lerne schnell und halte Schritt mit der schnellen Entwicklung moderner Webtechnologien.",
         "anotherSkill": "Du brauchst eine weitere Fähigkeit?",
-        "contactMe": "Kontaktiere mich gerne. Ich freue mich darauf, mein Wissen weiter auszubauen.",
+        "contactMe": "Melde dich gern bei mir. Ich bin immer offen für neue Projekte und Möglichkeiten, mein Wissen zu erweitern, zusammenzuarbeiten und weiterzuwachsen.",
         "letsTalk": "Lass uns sprechen"
     },
     "contact": {
         "contactMe": "Kontaktiere mich",
         "letsWorkTogether": "Lass uns zusammenarbeiten",
         "gotProblem": "Hast du ein Problem zu lösen?",
-        "encourageText": "Ermutige die Leute, dich zu kontaktieren, und beschreibe, welche Rolle dich interessiert. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte bringst.",
+        "encourageText": "Schreib mir einfach, wenn du Unterstützung brauchst. Ich freue mich über jede Zusammenarbeit, bei der wir gemeinsam etwas Sinnvolles entwickeln können.",
         "needFrontend": "Brauchst du einen Frontend-Entwickler?",
         "letsTalk": "Lass uns sprechen!",
         "labelName": "Wie heißt du?",
@@ -85,14 +85,14 @@
         "about": "Worum geht es in diesem Projekt?",
         "nextProject": "Nächstes Projekt",
         "github": "github",
-        "liveTest": "live test",
+        "liveTest": "live demo",
         "join": {
             "name": "Join",
-            "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop, weise Benutzer und Kategorien zu."
+            "description": "Ein Task-Manager im Kanban-Stil, entwickelt mit Angular, TypeScript und Firebase. Ich habe am Frontend gearbeitet, Services und Formulare umgesetzt sowie den GitHub-Workflow betreut. Zusätzlich habe ich das Projektmanagement im Scrum-Stil übernommen und Struktur in die Zusammenarbeit des Teams gebracht."
         },
         "knighthood": {
             "name": "Knighthood",
-            "description": "Jump, Run und Throw-Game basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+            "description": "Ein objektorientiertes Jump-and-Run-Spiel mit erweitertem Gameplay und komplett überarbeitetem Look. Ich habe eigene Sprites und Sounds erstellt, zusätzliche Mechaniken wie zwei Wurfgeschosse, ein Schlag- und Schwertkampfsystem, mehrere Gegnertypen sowie einen Parallax-Hintergrund und ein Scoreboard integriert. Die Spiellogik läuft in JavaScript, das Layout in HTML und CSS."
         },
         "dabubble": {
             "name": "DA Bubble",
@@ -100,7 +100,7 @@
         },
         "pokedex": {
             "name": "Pokedex",
-            "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+            "description": "Eine digitale Pokédex-App, die Pokémon-Daten wie Typen, Fähigkeiten und Entwicklungen dynamisch über die PokéAPI lädt. Ich habe die Datenabfrage und -verarbeitung mit JavaScript umgesetzt und das Interface mit HTML und CSS gestaltet. Das Projekt zeigt meine Fähigkeit, API-Daten strukturiert aufzubereiten und in ein benutzerfreundliches, responsives Frontend zu übersetzen."
         }
     },
     "footer": {

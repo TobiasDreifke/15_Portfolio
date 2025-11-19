@@ -24,7 +24,7 @@ export const PROJECTS: Projects[] = [
       { tech: 'JavaScript', image: 'assets/img/icons/javascript.png' }
     ],
     image: 'assets/img/img/projects/knighthood.png',
-    github: "https://github.com/TobiasDreifke/knighthood",
+    github: "https://github.com/TobiasDreifke/12_knighthood",
     liveTest: "https://knighthood.tobiasdreifke.com/",
   },
   {
